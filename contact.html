@@ -68,7 +68,6 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 <a href="automatisation-marketing.html"><b>Automatisation marketing</b><span>Dès 1 500 € HTVA</span></a>
 <a href="formation-ia-entreprise.html"><b>Formation IA en entreprise</b><span>1 200 € HTVA · demi-journée</span></a>
 <a href="responsable-marketing-externalise.html"><b>Responsable marketing externalisé</b><span>960 ou 1 920 € HTVA / mois</span></a>
-<a href="marketing-immobilier.html"><b>Marketing immobilier</b><span>Agences et patrimoine</span></a>
 <a class="dd-all" href="services.html"><b>TOUS LES SERVICES ET LES PRIX</b></a>
 </div>
 </div>
@@ -111,7 +110,6 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 <option value="automatisation">Automatiser des tâches marketing</option>
 <option value="formation">Former mon équipe à l’IA</option>
 <option value="externalise">Un responsable marketing externalisé</option>
-<option value="immobilier">Le marketing de mon agence immobilière</option>
 <option value="b2b">Ouvrir un canal B2B</option>
 <option value="autre">Autre chose</option>
 </select></label>
@@ -162,7 +160,6 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 <a href="automatisation-marketing.html" style="color: #C9D3CD; text-decoration: none">Automatisation marketing</a>
 <a href="formation-ia-entreprise.html" style="color: #C9D3CD; text-decoration: none">Formation IA en entreprise</a>
 <a href="responsable-marketing-externalise.html" style="color: #C9D3CD; text-decoration: none">Responsable marketing externalisé</a>
-<a href="marketing-immobilier.html" style="color: #C9D3CD; text-decoration: none">Marketing pour agences immobilières</a>
 </div>
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #C9A96E">CONTACT</span>
@@ -186,7 +183,7 @@ var note=document.getElementById("rdv-note");
 var sel=f.querySelector('select[name="Objectif"]');
 var q=new URLSearchParams(location.search).get("offre");
 if(q && sel){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===q){ sel.selectedIndex=i; break; } } }
-var SUJET={audit:"un audit SEO et IA",seo:"mon référencement sur Google et dans les IA",site:"la création de mon site internet",automatisation:"l’automatisation de tâches marketing",formation:"une formation à l’IA pour mon équipe",externalise:"un accompagnement comme responsable marketing externalisé",immobilier:"le marketing de mon agence immobilière",b2b:"l’ouverture d’un canal B2B",autre:"un projet marketing"};
+var SUJET={audit:"un audit SEO et IA",seo:"mon référencement sur Google et dans les IA",site:"la création de mon site internet",automatisation:"l’automatisation de tâches marketing",formation:"une formation à l’IA pour mon équipe",externalise:"un accompagnement comme responsable marketing externalisé",b2b:"l’ouverture d’un canal B2B",autre:"un projet marketing"};
 var FMT={bureau:"dans nos bureaux",visio:"en visio",tel:"par téléphone"};
 function val(d,k){ return (d.get(k)||"").toString().trim(); }
 function build(d){
