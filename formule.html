@@ -28,18 +28,49 @@ a:focus-visible{outline:2px solid #C9A96E;outline-offset:4px}
 .btn-gold:hover{background:#D8BE8A}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://francois170602.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://francois170602.github.io/services.html"}, {"@type": "ListItem", "position": 3, "name": "Responsable marketing externalisé", "item": "https://francois170602.github.io/responsable-marketing-externalise.html"}, {"@type": "ListItem", "position": 4, "name": "Le suivi mensuel", "item": "https://francois170602.github.io/formule.html"}]}</script>
+<style id="dd-css">
+nav[aria-label="Navigation principale"]{position:relative;z-index:40}
+.nav{position:relative}
+.dd{position:relative}
+.dd-top{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:10px 0;margin:0;cursor:pointer;font:inherit;letter-spacing:inherit;color:#E6DFD1;text-decoration:none}
+.dd-top.on,.dd-top:hover,.dd.open .dd-top{color:#C9A96E}
+.dd-top svg{width:10px;height:10px;transition:transform .25s ease}
+.dd.open .dd-top svg{transform:rotate(180deg)}
+.dd-menu{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);width:420px;max-width:calc(100vw - 32px);background:#0E3329;border:1px solid rgba(201,169,110,0.45);border-radius:3px;box-shadow:0 24px 48px rgba(0,0,0,0.35);padding:10px;z-index:50;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;letter-spacing:0;font-size:15px}
+.dd.open .dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media (hover:hover) and (min-width:861px){.dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}.dd:hover .dd-top svg{transform:rotate(180deg)}}
+.dd-menu a{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:2px;text-decoration:none;color:#F4EEE3;transition:background .15s}
+.dd-menu a:hover,.dd-menu a:focus-visible,.dd-menu a[aria-current]{background:rgba(201,169,110,0.12)}
+.dd-menu a b{font-family:'Source Serif 4',serif;font-weight:500;font-size:18px;line-height:1.25}
+.dd-menu a span{font-family:'Poppins',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.6px;text-transform:uppercase;color:#C9A96E}
+.dd-menu .dd-all{margin-top:6px;border-top:1px solid rgba(201,169,110,0.3);border-radius:0;padding-top:16px}
+.dd-menu .dd-all b{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:2.2px;color:#C9A96E}
+@media (max-width:860px){.nav{position:static}.dd{position:static}.dd-menu{left:16px;right:16px;width:auto;max-width:none;transform:translateY(8px)}.dd.open .dd-menu{transform:translateY(0)}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.75; color: #113B30; background: #F4EEE3">
 
-<section style="background: #113B30; color: #F4EEE3; overflow: hidden">
+<section style="background: #113B30; color: #F4EEE3; overflow-x: clip">
 <nav aria-label="Navigation principale" style="max-width: 1280px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px">
 <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
 <span style="width: 42px; height: 42px; border-radius: 8px; border: 1px solid rgba(201,169,110,0.7); display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 17px; color: #F4EEE3">FS</span>
 <span style="font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 21px; color: #F4EEE3">François Szmaj</span>
 </a>
 <div class="nav" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; font-size: 12px; font-weight: 500; letter-spacing: 2.6px">
-<a href="services.html" aria-current="page" style="color: #C9A96E; text-decoration: none">SERVICES</a>
+<div class="dd">
+<button type="button" class="dd-top on" aria-expanded="false" aria-controls="dd-menu">SERVICES <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+<div class="dd-menu" id="dd-menu">
+<a href="audit-seo.html"><b>Audit SEO et visibilité IA</b><span>590 € HTVA</span></a>
+<a href="consultant-seo-liege.html"><b>Référencement Google et IA</b><span>2 900 € HTVA · 3 mois</span></a>
+<a href="creation-site-internet-liege.html"><b>Création de site internet</b><span>Dès 2 500 € HTVA</span></a>
+<a href="automatisation-marketing.html"><b>Automatisation marketing</b><span>Dès 1 500 € HTVA</span></a>
+<a href="formation-ia-entreprise.html"><b>Formation IA en entreprise</b><span>1 200 € HTVA · demi-journée</span></a>
+<a href="responsable-marketing-externalise.html"><b>Responsable marketing externalisé</b><span>960 ou 1 920 € HTVA / mois</span></a>
+<a href="marketing-immobilier.html"><b>Marketing immobilier</b><span>Agences et patrimoine</span></a>
+<a class="dd-all" href="services.html"><b>TOUS LES SERVICES ET LES PRIX</b></a>
+</div>
+</div>
 <a href="references.html" style="color: #E6DFD1; text-decoration: none">RÉFÉRENCES</a>
 <a href="a-propos.html" style="color: #E6DFD1; text-decoration: none">À PROPOS</a>
 <a href="contact.html#rdv" style="color: #C9A96E; text-decoration: none; border: 1px solid rgba(201,169,110,0.7); padding: 12px 20px; border-radius: 2px">PRENDRE RENDEZ-VOUS</a>
@@ -223,5 +254,15 @@ a:focus-visible{outline:2px solid #C9A96E;outline-offset:4px}
 </footer>
 
 </div>
+<script id="dd-js">
+(function(){
+var dd=document.querySelector('.dd'); if(!dd) return;
+var b=dd.querySelector('.dd-top');
+function set(o){ dd.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); }
+b.addEventListener('click',function(e){ e.stopPropagation(); set(!dd.classList.contains('open')); });
+document.addEventListener('click',function(e){ if(!dd.contains(e.target)) set(false); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ set(false); b.focus(); } });
+})();
+</script>
 </body>
 </html>
