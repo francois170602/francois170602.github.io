@@ -22,6 +22,10 @@ body{margin:0;background:#113B30}
 a{color:#F4EEE3}a:hover{color:#C9A96E}
 a:focus-visible{outline:2px solid #C9A96E;outline-offset:4px}
 .nav a:hover{color:#C9A96E}
+.btn-gold{transition:background .25s ease}
+.btn-gold:hover{background:#D8BE8A}
+input:focus,select:focus,textarea:focus{outline:2px solid #C9A96E;outline-offset:2px}
+select option{color:#113B30;background:#F4EEE3}
 </style>
 </head>
 <body>
@@ -36,7 +40,7 @@ a:focus-visible{outline:2px solid #C9A96E;outline-offset:4px}
 <a href="formule.html" style="color: #E6DFD1; text-decoration: none">LA FORMULE</a>
 <a href="references.html" style="color: #E6DFD1; text-decoration: none">RÉFÉRENCES</a>
 <a href="a-propos.html" style="color: #E6DFD1; text-decoration: none">À PROPOS</a>
-<a href="contact.html" aria-current="page" style="color: #113B30; background: #C9A96E; text-decoration: none; border: 1px solid #C9A96E; padding: 12px 20px; border-radius: 2px">PRENDRE RENDEZ-VOUS</a>
+<a href="#rdv" aria-current="page" style="color: #113B30; background: #C9A96E; text-decoration: none; border: 1px solid #C9A96E; padding: 12px 20px; border-radius: 2px">PRENDRE RENDEZ-VOUS</a>
 </div>
 </nav>
 
@@ -52,7 +56,48 @@ a:focus-visible{outline:2px solid #C9A96E;outline-offset:4px}
 </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 120px 32px 130px; display: flex; flex-wrap: wrap; gap: 56px 96px">
+<section id="rdv" style="max-width: 1280px; margin: 0 auto; padding: 110px 32px 0; scroll-margin-top: 24px">
+<div style="border-top: 1px solid rgba(201,169,110,0.45); padding-top: 40px; display: flex; flex-wrap: wrap; gap: 48px 96px">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px; max-width: 420px">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #C9A96E">PRENDRE RENDEZ-VOUS</div>
+<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Une heure pour regarder votre situation.</h2>
+<p style="margin: 0; color: #D9D2C3">Dites-moi en quelques lignes où vous en êtes et ce que vous voulez obtenir. Je vous réponds sous 24 heures ouvrables pour fixer un créneau, chez vous, en visio ou au téléphone.</p>
+</div>
+<form action="https://formsubmit.co/francois.szmaj@icloud.com" method="POST" style="flex: 1.5 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 22px 24px">
+<input type="hidden" name="_subject" value="Demande de rendez-vous via le site">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://francois170602.github.io/merci.html">
+<input type="hidden" name="_autoresponse" value="Merci pour votre message. Je reviens vers vous sous 24 heures ouvrables pour fixer un rendez-vous. François Szmaj, 0484 70 59 20">
+<input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">NOM ET PRÉNOM<input type="text" name="Nom" required autocomplete="name" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">ENTREPRISE<input type="text" name="Entreprise" required autocomplete="organization" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">E-MAIL<input type="email" name="email" required autocomplete="email" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">TÉLÉPHONE (FACULTATIF)<input type="tel" name="Téléphone" autocomplete="tel" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">VOTRE OBJECTIF<select name="Objectif" required style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0">
+<option value="">Choisir</option>
+<option>Être trouvé sur Google et dans les IA</option>
+<option>Recevoir plus de demandes</option>
+<option>Ouvrir un canal B2B</option>
+<option>Automatiser des tâches marketing</option>
+<option>Former mon équipe à l’IA</option>
+<option>Structurer mon marketing</option>
+<option>Autre</option>
+</select></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">FORMAT PRÉFÉRÉ<select name="Format" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0">
+<option>Chez moi</option>
+<option>Visio</option>
+<option>Téléphone</option>
+</select></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 100%; min-width: 0">VOTRE MESSAGE<textarea name="Message" rows="5" required placeholder="Votre activité, ce qui a déjà été essayé, vos disponibilités…" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0; resize: vertical"></textarea></label>
+<div style="flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
+<button type="submit" class="btn-gold" style="background: #C9A96E; color: #113B30; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 2px; padding: 18px 30px; border-radius: 2px">DEMANDER UN RENDEZ-VOUS</button>
+<span style="font-size: 13px; color: #9FB1A8">Vos coordonnées servent uniquement à vous répondre.</span>
+</div>
+</form>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 110px 32px 130px; display: flex; flex-wrap: wrap; gap: 56px 96px">
 <div style="flex: 1.4 1 520px; min-width: 0; border-top: 1px solid rgba(201,169,110,0.45); padding-top: 32px; display: flex; flex-direction: column; gap: 16px; max-width: 700px">
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 30px">Ce qui se passe ensuite</h2>
 <p style="margin: 0; color: #D9D2C3">On se voit une heure, chez vous ou au téléphone. On part de votre objectif, de vos chiffres et de ce qui a déjà été essayé.</p>
