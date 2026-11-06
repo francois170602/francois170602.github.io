@@ -63,12 +63,8 @@ select option{color:#113B30;background:#F4EEE3}
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1">Une heure pour regarder votre situation.</h2>
 <p style="margin: 0; color: #D9D2C3">Dites-moi en quelques lignes où vous en êtes et ce que vous voulez obtenir. Je vous réponds sous 24 heures ouvrables pour fixer un créneau, chez vous, en visio ou au téléphone.</p>
 </div>
-<form action="https://formsubmit.co/francois.szmaj@icloud.com" method="POST" style="flex: 1.5 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 22px 24px">
-<input type="hidden" name="_subject" value="Demande de rendez-vous via le site">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="https://francois170602.github.io/merci.html">
-<input type="hidden" name="_autoresponse" value="Merci pour votre message. Je reviens vers vous sous 24 heures ouvrables pour fixer un rendez-vous. François Szmaj, 0484 70 59 20">
-<input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off">
+<form id="rdv-form" novalidate style="flex: 1.5 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 22px 24px">
+<input type="text" name="botcheck" style="display: none" tabindex="-1" autocomplete="off">
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">NOM ET PRÉNOM<input type="text" name="Nom" required autocomplete="name" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">ENTREPRISE<input type="text" name="Entreprise" required autocomplete="organization" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 280px; min-width: 0">E-MAIL<input type="email" name="email" required autocomplete="email" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0"></label>
@@ -91,7 +87,7 @@ select option{color:#113B30;background:#F4EEE3}
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E; flex: 1 1 100%; min-width: 0">VOTRE MESSAGE<textarea name="Message" rows="5" required placeholder="Votre activité, ce qui a déjà été essayé, vos disponibilités…" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 16px; color: #F4EEE3; background: #0E3329; border: 1px solid rgba(201,169,110,0.45); border-radius: 2px; padding: 14px 16px; letter-spacing: 0; resize: vertical"></textarea></label>
 <div style="flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
 <button type="submit" class="btn-gold" style="background: #C9A96E; color: #113B30; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 2px; padding: 18px 30px; border-radius: 2px">DEMANDER UN RENDEZ-VOUS</button>
-<span style="font-size: 13px; color: #9FB1A8">Vos coordonnées servent uniquement à vous répondre.</span>
+<span id="rdv-note" style="font-size: 13px; color: #9FB1A8">Vos coordonnées servent uniquement à vous répondre.</span>
 </div>
 </form>
 </div>
@@ -120,5 +116,30 @@ select option{color:#113B30;background:#F4EEE3}
 </footer>
 
 </div>
+<script>
+(function(){
+var KEY=""; /* clé Web3Forms : si elle est renseignée, envoi direct ; sinon, ouverture de la messagerie */
+var TO="francois.szmaj@icloud.com";
+var f=document.getElementById("rdv-form"); if(!f) return;
+var note=document.getElementById("rdv-note");
+f.addEventListener("submit",function(e){
+ e.preventDefault();
+ if(!f.reportValidity()) return;
+ if(f.botcheck && f.botcheck.value) return;
+ var d=new FormData(f), lines=[];
+ ["Nom","Entreprise","email","Téléphone","Objectif","Format","Message"].forEach(function(k){var v=d.get(k); if(v) lines.push((k==="email"?"E-mail":k)+" : "+v);});
+ var subject="Demande de rendez-vous : "+(d.get("Entreprise")||d.get("Nom")||"");
+ function mail(){ window.location.href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n")+"\n"); note.textContent="Votre messagerie s’ouvre avec la demande prête à envoyer. Si rien ne s’ouvre, écrivez à "+TO+" ou appelez le 0484 70 59 20."; }
+ if(!KEY){ mail(); return; }
+ note.textContent="Envoi en cours…";
+ var p={access_key:KEY,subject:subject,from_name:"Site François Szmaj",replyto:d.get("email")};
+ d.forEach(function(v,k){ if(k!=="botcheck") p[k]=v; });
+ var ctl=new AbortController(); setTimeout(function(){ctl.abort();},10000);
+ fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(p),signal:ctl.signal})
+ .then(function(r){return r.json();}).then(function(j){ if(j.success){ window.location.href="merci.html"; } else { mail(); } })
+ .catch(mail);
+});
+})();
+</script>
 </body>
 </html>
