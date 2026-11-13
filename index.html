@@ -50,17 +50,53 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 .dd-menu .dd-all b{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:2.2px;color:#C9A96E}
 @media (max-width:860px){.nav{position:static}.dd{position:static}.dd-menu{left:16px;right:16px;width:auto;max-width:none;transform:translateY(8px)}.dd.open .dd-menu{transform:translateY(0)}}
 </style>
+<style id="rwd-css">
+:root{--g:clamp(20px,5vw,80px)}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+.wrap{padding-left:var(--g)!important;padding-right:var(--g)!important}
+.burger{display:none;align-items:center;gap:10px;background:none;border:1px solid rgba(201,169,110,0.6);border-radius:2px;color:#F4EEE3;font:500 12px 'Poppins',sans-serif;letter-spacing:2.4px;padding:11px 14px;cursor:pointer}
+.burger i{display:block;width:16px;height:1px;background:#C9A96E;position:relative}
+.burger i:before,.burger i:after{content:'';position:absolute;left:0;width:16px;height:1px;background:#C9A96E;transition:transform .2s}
+.burger i:before{top:-5px}.burger i:after{top:5px}
+nav.open .burger i{background:transparent}
+nav.open .burger i:before{transform:translateY(5px) rotate(45deg)}
+nav.open .burger i:after{transform:translateY(-5px) rotate(-45deg)}
+@media (max-width:860px){
+ nav[aria-label="Navigation principale"]{padding-top:18px!important;padding-bottom:18px!important}
+ .burger{display:inline-flex}
+ nav[aria-label="Navigation principale"] .nav{display:none!important;flex-basis:100%;flex-direction:column;align-items:stretch!important;gap:0!important;font-size:13px!important;padding-top:8px}
+ nav.open .nav{display:flex!important}
+ .nav>a,.nav .dd-top{padding:16px 0!important;border-bottom:1px solid rgba(201,169,110,0.25)}
+ .nav>a[href="contact.html#rdv"]{margin-top:18px;text-align:center;border:1px solid rgba(201,169,110,0.7)!important;padding:16px 20px!important}
+ .nav .dd-top{pointer-events:none;width:100%;justify-content:flex-start;color:#C9A96E}
+ .nav .dd-top svg{display:none}
+ .nav .dd-menu{position:static!important;opacity:1!important;visibility:visible!important;transform:none!important;width:auto!important;background:none!important;border:0!important;box-shadow:none!important;padding:4px 0 8px!important}
+ .nav .dd-menu a{padding:10px 0 10px 14px}
+ .nav .dd-menu a b{font-size:17px}
+ .nav .dd-menu .dd-all{border-top:0;margin-top:0;padding-top:10px}
+ img[fetchpriority="high"]{max-width:min(72vw,300px)!important}
+ [aria-hidden="true"][style*="position: absolute; right"]{display:none!important}
+ .kw span[style="color: #C9A96E"]{display:none}
+ .kw{gap:8px 18px!important;font-size:11px!important;letter-spacing:2px!important}
+}
+@media (max-width:480px){
+ h1{letter-spacing:-0.8px!important}
+ .btn-gold{display:block!important;text-align:center}
+}
+</style>
 </head>
 <body>
 <div style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.75; color: #113B30; background: #F4EEE3">
 
 <section style="background: #113B30; color: #F4EEE3; overflow-x: clip">
-<nav aria-label="Navigation principale" style="max-width: 1280px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px">
+<nav aria-label="Navigation principale" style="max-width: 1280px; margin: 0 auto; padding: 28px var(--g); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px">
 <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
 <span style="width: 42px; height: 42px; border-radius: 8px; border: 1px solid rgba(201,169,110,0.7); display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 17px; color: #F4EEE3">FS</span>
 <span style="font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 21px; color: #F4EEE3">François Szmaj</span>
 </a>
-<div class="nav" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; font-size: 12px; font-weight: 500; letter-spacing: 2.6px">
+<button type="button" class="burger" aria-expanded="false" aria-controls="nav-links"><span>MENU</span><i aria-hidden="true"></i></button>
+<div class="nav" id="nav-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; font-size: 12px; font-weight: 500; letter-spacing: 2.6px">
 <div class="dd">
 <button type="button" class="dd-top" aria-expanded="false" aria-controls="dd-menu">SERVICES <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
 <div class="dd-menu" id="dd-menu">
@@ -79,8 +115,8 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </div>
 </nav>
 
-<div style="max-width: 1280px; margin: 0 auto; padding: 40px 32px 0; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 40px 64px">
-<div style="flex: 1 1 520px; min-width: 0; padding-bottom: 112px; display: flex; flex-direction: column; gap: 30px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 40px var(--g) 0; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 40px 64px">
+<div style="flex: 1 1 520px; min-width: 0; padding-bottom: clamp(47px, 7.78vw, 112px); display: flex; flex-direction: column; gap: 30px">
 <div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #C9A96E">CONSULTANT MARKETING · LIÈGE · BRUXELLES · MARRAKECH</div>
 <h1 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(42px, 5.4vw, 76px); line-height: 1.05; letter-spacing: -1.5px; color: #F4EEE3">Consultant marketing à Liège, pour les PME qui veulent plus de clients.</h1>
 <div style="width: 96px; height: 1px; background: #C9A96E"></div>
@@ -98,12 +134,12 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </section>
 
 <div style="background: #0B2B23; border-top: 1px solid rgba(201,169,110,0.3)">
-<div style="max-width: 1280px; margin: 0 auto; padding: 26px 32px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 26px; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #E6DFD1">
+<div class="kw" style="max-width: 1280px; margin: 0 auto; padding: 26px var(--g); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 26px; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #E6DFD1">
 <span>SEO &amp; RÉFÉRENCEMENT IA</span><span style="color: #C9A96E">·</span><span>CRÉATION DE SITES</span><span style="color: #C9A96E">·</span><span>AUTOMATISATIONS</span><span style="color: #C9A96E">·</span><span>FORMATION IA</span><span style="color: #C9A96E">·</span><span>CANAL B2B</span><span style="color: #C9A96E">·</span><span>MARKETING EXTERNALISÉ</span>
 </div>
 </div>
 
-<section style="max-width: 900px; margin: 0 auto; padding: 150px 32px 140px; display: flex; flex-direction: column; align-items: center; gap: 34px; text-align: center">
+<section style="max-width: 900px; margin: 0 auto; padding: clamp(63px, 10.42vw, 150px) var(--g) clamp(59px, 9.72vw, 140px); display: flex; flex-direction: column; align-items: center; gap: 34px; text-align: center">
 <div aria-hidden="true" style="width: 58px; height: 58px; border-radius: 10px; background: #113B30; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 22px; color: #F4EEE3">FS</div>
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.25; letter-spacing: -0.5px; color: #113B30">Votre entreprise a besoin d’un responsable marketing. Pas forcément à temps plein, et pas au prix d’une agence.</h2>
 <div style="width: 64px; height: 1px; background: #C9A96E"></div>
@@ -111,7 +147,7 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </section>
 
 <section style="background: #FAF6EE; border-top: 1px solid #E4D8BF">
-<div style="max-width: 1280px; margin: 0 auto; padding: 130px 32px 140px">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(55px, 9.03vw, 130px) var(--g) clamp(59px, 9.72vw, 140px)">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 56px">
 <h2 style="flex: 1 1 460px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Ce que je prends en charge</h2>
 <p style="flex: 1 1 360px; max-width: 440px; margin: 0; color: #3F5049">Selon votre objectif, une partie ou l’ensemble de ces sujets, avec un plan écrit et un bilan chaque mois. <a href="services.html" class="lk">Voir les services et les prix</a>.</p>
@@ -154,7 +190,7 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </section>
 
 <section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 1280px; margin: 0 auto; padding: 140px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px 96px">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g); display: flex; flex-wrap: wrap; align-items: center; gap: 64px 96px">
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
 <div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #C9A96E">LA FORMULE</div>
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Quelques jours par mois, chez vous et à distance.</h2>
@@ -214,7 +250,7 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </section>
 
 <section style="background: #EDE4D3">
-<div style="max-width: 1280px; margin: 0 auto; padding: 140px 32px">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g)">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 64px">
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Ils me font confiance</h2>
 <a href="references.html" style="color: #113B30; font-size: 15px; font-weight: 400; text-decoration: underline; text-decoration-color: #B8925A; text-underline-offset: 7px">Voir les références</a>
@@ -265,7 +301,7 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 
 
 <section style="background: #F4EEE3">
-<div style="max-width: 1280px; margin: 0 auto; padding: 140px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px 96px">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g); display: flex; flex-wrap: wrap; align-items: center; gap: 64px 96px">
 <div style="flex: 1 1 340px; max-width: 440px">
 <img src="francois-szmaj-portrait-2026.jpg" width="900" height="1200" loading="lazy" alt="Portrait de François Szmaj" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; display: block; border-radius: 999px 999px 0 0">
 </div>
@@ -280,7 +316,7 @@ nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 </section>
 
 <section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 900px; margin: 0 auto; padding: 150px 32px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
+<div style="max-width: 900px; margin: 0 auto; padding: clamp(63px, 10.42vw, 150px) var(--g); display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
 <h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.08; letter-spacing: -1px">Quel est votre objectif ?</h2>
 <p style="margin: 0; max-width: 560px; color: #D9D2C3">Plus de demandes, un canal B2B à ouvrir, une marque à faire connaître, une équipe à structurer. On en parle une heure et on regarde par où commencer.</p>
 <a href="tel:+32484705920" style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); color: #C9A96E; text-decoration: none; letter-spacing: 0.5px">0484 70 59 20</a>
@@ -328,6 +364,13 @@ function set(o){ dd.classList.toggle('open',o); b.setAttribute('aria-expanded',o
 b.addEventListener('click',function(e){ e.stopPropagation(); set(!dd.classList.contains('open')); });
 document.addEventListener('click',function(e){ if(!dd.contains(e.target)) set(false); });
 document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ set(false); b.focus(); } });
+})();
+</script>
+<script id="rwd-js">
+(function(){
+var n=document.querySelector('nav[aria-label="Navigation principale"]'),b=n&&n.querySelector('.burger'); if(!b) return;
+b.addEventListener('click',function(){var o=n.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false'); b.querySelector('span').textContent=o?'FERMER':'MENU';});
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&n.classList.contains('open')) b.click(); });
 })();
 </script>
 </body>
