@@ -61,7 +61,8 @@ nav.open .burger i:before{transform:translateY(5px) rotate(45deg)}
 nav.open .burger i:after{transform:translateY(-5px) rotate(-45deg)}
 @media (max-width:860px){
  nav[aria-label="Navigation principale"]{padding-top:18px!important;padding-bottom:18px!important}
- .burger{display:inline-flex}
+ nav[aria-label="Navigation principale"]{column-gap:12px!important}
+ .burger{display:inline-flex;margin-left:auto;min-width:118px;justify-content:center}
  nav[aria-label="Navigation principale"] .nav{display:none!important;flex-basis:100%;flex-direction:column;align-items:stretch!important;gap:0!important;font-size:13px!important;padding-top:8px}
  nav.open .nav{display:flex!important}
  .nav>a,.nav .dd-top{padding:16px 0!important;border-bottom:1px solid rgba(201,169,110,0.25)}
@@ -72,6 +73,7 @@ nav.open .burger i:after{transform:translateY(-5px) rotate(-45deg)}
  .nav .dd-menu a{padding:10px 0 10px 14px}
  .nav .dd-menu a b{font-size:17px}
  .nav .dd-menu .dd-all{border-top:0;margin-top:0;padding-top:10px}
+ .nav .dd-menu .dd-all b{font-size:12px}
  img[fetchpriority="high"]{max-width:min(72vw,300px)!important}
  [aria-hidden="true"][style*="position: absolute; right"]{display:none!important}
  .kw span[style="color: #C9A96E"]{display:none}
