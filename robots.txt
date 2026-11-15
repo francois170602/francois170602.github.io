@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /merci.html
 
-Sitemap: https://francois170602.github.io/sitemap.xml
+Sitemap: https://szmaj.be/sitemap.xml
