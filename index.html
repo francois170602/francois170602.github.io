@@ -134,6 +134,38 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 h1{font-size:clamp(40px,5vw,74px)!important;line-height:1.05!important}
 @media (min-width:900px){h1 em.ac{white-space:nowrap}}
 </style>
+<style id="home-css">
+.hero-photo{flex:1 1 380px;min-width:0;position:relative;display:flex;justify-content:center;align-self:flex-end}
+.hero-avatar{display:none}
+.proof-line{display:flex;align-items:center;gap:14px;font-size:15px;color:#D9D2C3;border-left:2px solid #C9A96E;padding-left:16px;max-width:520px}
+.num{font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(40px,4.4vw,60px);line-height:1;color:#113B30}
+.num-l{font-size:15px;line-height:1.55;color:#3F5049;margin-top:10px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shots img{width:100%;height:auto;display:block;border-radius:2px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.steps li{counter-increment:s;border-top:1px solid rgba(201,169,110,.45);padding-top:18px;color:#D9D2C3}
+.steps li::before{content:"0" counter(s);display:block;font-size:13px;letter-spacing:3px;color:#C9A96E;margin-bottom:8px}
+.steps b{display:block;font-family:'Source Serif 4',serif;font-weight:500;font-size:22px;color:#F4EEE3;margin-bottom:6px}
+.svc{list-style:none;margin:0;padding:0;columns:2;column-gap:56px}
+.svc li{break-inside:avoid;border-bottom:1px solid #D9C9A6}
+.svc a{display:flex;justify-content:space-between;gap:16px;padding:16px 0;color:#113B30;text-decoration:none;min-height:24px}
+.svc a:hover span:first-child{text-decoration:underline;text-decoration-color:#B8925A;text-underline-offset:5px}
+.svc span:last-child{font-size:14px;color:#7A5C26;white-space:nowrap}
+.lnk{display:inline-block;padding:10px 0;font-size:15px;text-decoration:underline;text-underline-offset:7px}
+.callbar{display:none}
+@media (max-width:760px){
+ .hero-photo{display:none}
+ .hero-avatar{display:block;width:56px;height:56px;border-radius:50%;overflow:hidden;flex:0 0 56px;background:#0E3329}
+ .hero-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.55);transform-origin:50% 26%;display:block}
+ .shots{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:calc(-1*var(--g));padding-right:var(--g)}
+ .shots figure{scroll-snap-align:start}
+ .steps{grid-template-columns:1fr}
+ .svc{columns:1}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#0B2B23;border-top:1px solid rgba(201,169,110,.4);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+ .callbar a{flex:1;text-align:center;padding:14px 8px;font-size:13px;font-weight:500;letter-spacing:1.5px;text-decoration:none;border-radius:2px}
+ body{padding-bottom:76px}
+}
+</style>
 </head>
 <body>
 <div style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.75; color: #113B30; background: #F4EEE3">
@@ -169,227 +201,101 @@ h1{font-size:clamp(40px,5vw,74px)!important;line-height:1.05!important}
 </nav>
 
 <div style="max-width: 1280px; margin: 0 auto; padding: 40px var(--g) 0; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 40px 64px">
-<div style="flex: 1 1 520px; min-width: 0; padding-bottom: clamp(47px, 7.78vw, 112px); display: flex; flex-direction: column; gap: 30px">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #C9A96E">RESPONSABLE MARKETING EXTERNE · LIÈGE · BRUXELLES · MARRAKECH</div>
-<h1 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(42px, 5.4vw, 76px); line-height: 1.05; letter-spacing: -1.5px; color: #F4EEE3">Le responsable marketing externe <em class="ac">des PME à Liège.</em></h1>
-<div style="width: 96px; height: 1px; background: #C9A96E"></div>
-<p style="margin: 0; max-width: 540px; font-size: 18px; color: #D9D2C3">Quand quelqu’un cherche votre métier sur Google ou pose la question à ChatGPT, c’est vous qu’il doit trouver. Je m’occupe de votre site, de votre référencement, de vos réseaux sociaux et de vos publicités. Pour un projet précis, ou chaque mois comme responsable marketing de votre entreprise.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 6px">
+<div style="flex: 1 1 520px; min-width: 0; padding-bottom: clamp(48px, 7vw, 100px); display: flex; flex-direction: column; gap: 26px">
+<div class="eyebrow">Liège · Bruxelles · Marrakech</div>
+<h1 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(40px, 5.4vw, 76px); line-height: 1.05; letter-spacing: -1.5px; color: #F4EEE3">Le responsable marketing externe <em class="ac">des PME à Liège</em></h1>
+<p style="margin: 0; max-width: 520px; font-size: 18px; color: #D9D2C3">Je deviens le responsable marketing de votre PME deux jours par mois ou plus. Je m’occupe du site, de Google, des réseaux sociaux et de la publicité. Chaque mois, vous recevez les chiffres.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px">
 <a class="btn-gold" href="/contact#rdv" style="background: #C9A96E; color: #113B30; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 2px; padding: 18px 30px; border-radius: 2px">PRENDRE RENDEZ-VOUS</a>
-<a href="/services" style="color: #F4EEE3; font-size: 15px; font-weight: 400; text-decoration: underline; text-decoration-color: rgba(201,169,110,0.8); text-underline-offset: 7px">Voir les services et les prix</a>
+<a class="lnk" href="tel:+32484705920" style="color: #F4EEE3; text-decoration-color: rgba(201,169,110,0.8)">0484 70 59 20</a>
 </div>
+<div class="proof-line"><span class="hero-avatar"><img src="francois-szmaj-portrait-2026.jpg" width="900" height="1200" alt="François Szmaj"></span><span>Chez Immobilière Optimum, la position moyenne sur Google est passée de 29 à 11 en trois mois.</span></div>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; position: relative; display: flex; justify-content: center; align-self: flex-end">
+<div class="hero-photo">
 <div aria-hidden="true" style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 78%; height: 88%; background: #0E3329; border: 1px solid rgba(201,169,110,0.55); border-bottom: none; border-radius: 999px 999px 0 0"></div>
-<img src="francois-szmaj-2026.webp" width="760" height="854" fetchpriority="high" alt="François Szmaj" style="position: relative; width: 100%; max-width: 520px; height: auto; align-self: flex-end; display: block">
+<img src="francois-szmaj-2026.webp" width="760" height="854" fetchpriority="high" alt="François Szmaj" style="position: relative; width: 100%; max-width: 400px; height: auto; align-self: flex-end; display: block">
 </div>
 </div>
 </section>
-
-<div style="background: #0B2B23; border-top: 1px solid rgba(201,169,110,0.3)">
-<div class="kw" style="max-width: 1280px; margin: 0 auto; padding: 26px var(--g); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 26px; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #E6DFD1">
-<span>SITE INTERNET</span><span style="color: #C9A96E">·</span><span>RÉFÉRENCEMENT GOOGLE</span><span style="color: #C9A96E">·</span><span>RÉSEAUX SOCIAUX</span><span style="color: #C9A96E">·</span><span>PUBLICITÉ</span><span style="color: #C9A96E">·</span><span>AUTOMATISATIONS</span><span style="color: #C9A96E">·</span><span>FORMATION IA</span>
-</div>
-</div>
 
 <section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<div class="eyebrow dark">DEUX FAÇONS DE TRAVAILLER ENSEMBLE</div>
-<h2 class="h2" style="margin: 14px 0 48px; max-width: 760px">Un suivi chaque mois ou <em class="ac">un projet précis.</em></h2>
-<div style="display: flex; flex-wrap: wrap; gap: 28px">
-<a href="/responsable-marketing-externalise" style="flex: 1 1 380px; min-width: 0; background: #113B30; color: #F4EEE3; text-decoration: none; padding: clamp(28px, 3.5vw, 48px); display: flex; flex-direction: column; gap: 18px; border-radius: 2px"><span class="eyebrow">01 · MARKETING EXTERNE</span><span style="font-family: 'Source Serif 4', serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.15">Votre responsable marketing <em class="ac">quelques jours par mois.</em></span><ul style="list-style: none; margin: 0; padding: 0; color: #D9D2C3"><li style="padding: 9px 0; border-bottom: 1px solid rgba(201,169,110,0.25)">Pour les PME sans responsable marketing</li><li style="padding: 9px 0; border-bottom: 1px solid rgba(201,169,110,0.25)">Un plan clair, avec les priorités</li><li style="padding: 9px 0; border-bottom: 1px solid rgba(201,169,110,0.25)">Je m’occupe de tout : site, Google, contenus, publicité</li><li style="padding: 9px 0; border-bottom: 1px solid rgba(201,169,110,0.25)">Un bilan chiffré chaque mois</li></ul><span style="font-size: 13px; font-weight: 500; letter-spacing: 1.5px; color: #C9A96E">À PARTIR DE 990 € HTVA PAR MOIS</span><span class="lk" style="color: #F4EEE3; align-self: flex-start">Découvrir le marketing externe</span></a>
-<a href="/agence" style="flex: 1 1 380px; min-width: 0; background: #FAF6EE; color: #113B30; text-decoration: none; padding: clamp(28px, 3.5vw, 48px); display: flex; flex-direction: column; gap: 18px; border: 1px solid #D9C9A6; border-radius: 2px"><span class="eyebrow dark">02 · L’AGENCE</span><span style="font-family: 'Source Serif 4', serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.15">Un projet précis <em class="ac">livré à prix fixe.</em></span><ul style="list-style: none; margin: 0; padding: 0; color: #3F5049"><li style="padding: 9px 0; border-bottom: 1px solid #D9C9A6">Logo, identité et brand book</li><li style="padding: 9px 0; border-bottom: 1px solid #D9C9A6">Site internet, SEO et visibilité IA</li><li style="padding: 9px 0; border-bottom: 1px solid #D9C9A6">Réseaux sociaux, vidéo, podcast, publicité</li><li style="padding: 9px 0; border-bottom: 1px solid #D9C9A6">Automatisations et formation IA</li></ul><span style="font-size: 13px; font-weight: 500; letter-spacing: 1.5px; color: #7A5C26">À LA CARTE · DÈS 390 € HTVA</span><span class="lk" style="color: #113B30; align-self: flex-start">Voir toutes les prestations</span></a>
+<div class="wrap" style="padding-top: clamp(56px, 8vw, 120px); padding-bottom: clamp(56px, 8vw, 120px)">
+<div class="eyebrow dark">Résultats</div>
+<h2 class="h2" style="margin: 14px 0 40px; max-width: 760px">Trois mois chez Immobilière Optimum</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 36px 48px; margin-bottom: clamp(56px, 7vw, 96px)">
+<div style="flex: 1 1 220px"><div class="num">29 → 11</div><div class="num-l">Position moyenne sur Google, d’août à octobre 2026</div></div>
+<div style="flex: 1 1 220px"><div class="num">+60 %</div><div class="num-l">De clics depuis Google, de 648 à 1 040 par mois</div></div>
+<div style="flex: 1 1 220px"><div class="num">350 000</div><div class="num-l">Vues sur Facebook et Instagram, dont deux reels à plus de 60 000</div></div>
 </div>
+<div class="shots">
+<figure style="margin: 0"><img src="/img/bab-akoul-moroccan-night.webp" width="720" height="900" loading="lazy" alt="Affiche Moroccan Night pour Bab Akoul"></figure>
+<figure style="margin: 0"><img src="/img/bab-akoul-carrousel-domaine.webp" width="720" height="900" loading="lazy" alt="Carrousel Instagram sur le domaine Bab Akoul"></figure>
+<figure style="margin: 0"><img src="/img/bab-akoul-carrousel-avis.webp" width="720" height="900" loading="lazy" alt="Carrousel Instagram sur les avis des clients de Bab Akoul"></figure>
 </div>
-</section>
-<section style="max-width: 900px; margin: 0 auto; padding: clamp(63px, 10.42vw, 150px) var(--g) clamp(59px, 9.72vw, 140px); display: flex; flex-direction: column; align-items: center; gap: 34px; text-align: center">
-<div aria-hidden="true" style="width: 58px; height: 58px; border-radius: 10px; background: #113B30; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 22px; color: #F4EEE3">FS</div>
-<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.25; letter-spacing: -0.5px; color: #113B30">Une équipe marketing complète <em class="ac">boostée à l’IA.</em></h2>
-<div style="width: 64px; height: 1px; background: #C9A96E"></div>
-<p style="margin: 0; max-width: 640px; color: #3F5049">Rédaction, référencement, réseaux sociaux, vidéo, publicité et suivi des chiffres. Je prends en charge l’exécution de tout ce que ferait une équipe marketing grâce à l’IA et à des automatisations qui tournent chaque jour. Je garde la stratégie en main et je valide tout ce qui sort avant publication.</p>
-</section>
-
-<section style="background: #FAF6EE; border-top: 1px solid #E4D8BF">
-<div style="max-width: 1280px; margin: 0 auto; padding: clamp(55px, 9.03vw, 130px) var(--g) clamp(59px, 9.72vw, 140px)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 56px">
-<h2 style="flex: 1 1 460px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Le marketing externe : ce que je prends en charge</h2>
-<p style="flex: 1 1 360px; max-width: 440px; margin: 0; color: #3F5049">Selon votre objectif, une partie ou l’ensemble de ces sujets, avec un plan écrit et un bilan chaque mois. <a href="/services" class="lk">Voir les services et les prix</a>.</p>
-</div>
-<div style="border-top: 1px solid #D9C9A6">
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/audit-seo" class="lk" style="text-decoration-thickness: 1px">Audit et stratégie</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Un état des lieux à prix fixe : où vous apparaissez sur Google et dans ChatGPT, ce que font vos concurrents, et par quoi commencer.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/creation-site-internet-liege" class="lk" style="text-decoration-thickness: 1px">Création de site internet</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Un site clair, qui sort sur Google et qui donne envie de vous appeler. Je m’occupe de tout, des textes à la mise en ligne.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/consultant-seo-liege" class="lk" style="text-decoration-thickness: 1px">Référencement Google et IA</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Apparaître quand on cherche votre métier dans votre région : sur Google, sur Google Maps et dans les réponses de ChatGPT.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/automatisation-marketing" class="lk" style="text-decoration-thickness: 1px">Automatisation marketing</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Les tâches qui reviennent tout le temps se font toutes seules : demandes d’avis, relances, e-mails après une vente. Vous gagnez des heures chaque mois.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/responsable-marketing-externalise" class="lk" style="text-decoration-thickness: 1px">Clients professionnels</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Trouver des clients entreprises : une offre claire, une présentation, LinkedIn, des prises de contact et des relances.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25">Contenus et réseaux sociaux</h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Des publications régulières et des articles, avec un calendrier tenu dans la durée.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/responsable-marketing-externalise" class="lk" style="text-decoration-thickness: 1px">Organisation et équipe</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Mettre de l’ordre dans le marketing : qui fait quoi, avec quels outils, et suivre les prestataires.</p>
-</div>
-<div class="line" style="display: flex; flex-wrap: wrap; gap: 8px 64px; padding: 30px 0; border-bottom: 1px solid #D9C9A6">
-<h3 style="flex: 1 1 380px; margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 28px; line-height: 1.25"><a href="/formation-ia-entreprise" class="lk" style="text-decoration-thickness: 1px">Formation IA en entreprise</a></h3>
-<p style="flex: 1.3 1 420px; margin: 0; color: #3F5049">Une demi-journée pour que votre équipe utilise ChatGPT, Claude ou Copilot sur ses vraies tâches, avec les règles de prudence qui vont avec.</p>
-</div>
-</div>
+<p style="margin: 16px 0 0; font-size: 14px; color: #3F5049">Publications réalisées pour <a href="https://bab-akoul.net/" target="_blank" rel="noopener">Bab Akoul</a>, trois établissements à Marrakech. <a href="/references">Toutes les références</a></p>
 </div>
 </section>
 
 <section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 1280px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g); display: flex; flex-wrap: wrap; align-items: center; gap: 64px 96px">
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #C9A96E">LA FORMULE</div>
-<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Quelques jours par mois <em class="ac">chez vous et à distance.</em></h2>
-<p style="margin: 0; max-width: 480px; color: #D9D2C3">Le nombre de jours et la durée dépendent de votre objectif. Trouver des clients professionnels ne demande pas le même rythme que refaire un site. On le fixe ensemble au départ, et on l’ajuste en chemin.</p>
-<a href="/formule" style="align-self: flex-start; color: #F4EEE3; font-size: 15px; font-weight: 400; text-decoration: underline; text-decoration-color: rgba(201,169,110,0.8); text-underline-offset: 7px">Découvrir la formule en détail</a>
-</div>
-<div style="flex: 1 1 440px; min-width: 0; max-width: 520px; background: #0E3329; border: 1px solid rgba(201,169,110,0.35); padding: 36px 34px 30px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px">
-<span style="font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 500">Novembre 2026</span>
-<span style="font-size: 11px; font-weight: 500; letter-spacing: 2.5px; color: #C9A96E">EXEMPLE · 4 JOURS</span>
-</div>
-<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 8px; text-align: center">
-<span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">L</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">M</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">M</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">J</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">V</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">S</span><span style="font-size: 11px; font-weight: 500; letter-spacing: 1px; color: #9FB1A8; padding-bottom: 6px">D</span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">1</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">2</span>
-<span style="justify-self: center; width: 38px; height: 38px; border-radius: 50%; background: #C9A96E; color: #113B30; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center">3</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">4</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">5</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">6</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">7</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">8</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">9</span>
-<span style="justify-self: center; width: 38px; height: 38px; border-radius: 50%; background: #C9A96E; color: #113B30; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center">10</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">11</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">12</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">13</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">14</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">15</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">16</span>
-<span style="justify-self: center; width: 38px; height: 38px; border-radius: 50%; background: #C9A96E; color: #113B30; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center">17</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">18</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">19</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">20</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">21</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">22</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">23</span>
-<span style="justify-self: center; width: 38px; height: 38px; border-radius: 50%; background: #C9A96E; color: #113B30; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center">24</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">25</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">26</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">27</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">28</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">29</span>
-<span style="justify-self: center; width: 38px; height: 38px; color: #C9D3CD; font-size: 14px; display: flex; align-items: center; justify-content: center">30</span>
-</div>
-<div style="border-top: 1px solid rgba(201,169,110,0.3); margin-top: 22px; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #C9D3CD">
-<span><span style="color: #C9A96E">●</span> 3 et 17 : chez vous</span>
-<span><span style="color: #C9A96E">●</span> 10 et 24 : à distance</span>
-</div>
+<div class="wrap" style="padding-top: clamp(56px, 8vw, 120px); padding-bottom: clamp(56px, 8vw, 120px)">
+<div class="eyebrow">Marketing externe</div>
+<h2 class="h2" style="margin: 14px 0 16px; max-width: 760px; color: #F4EEE3">Je rejoins votre équipe quelques jours par mois</h2>
+<p style="margin: 0 0 40px; max-width: 620px; color: #D9D2C3">Une partie chez vous, une partie à distance. Pour les PME qui n’ont pas de responsable marketing.</p>
+<ol class="steps">
+<li><b>On fixe l’objectif</b>Plus de demandes, des clients professionnels, une marque connue. Je vous remets un plan écrit.</li>
+<li><b>Je fais le travail</b>Site, Google, contenus, réseaux, publicité. J’utilise l’IA pour aller vite et je relis tout.</li>
+<li><b>Vous voyez les chiffres</b>Un bilan chaque mois : visites, demandes, ce qui marche, ce qu’on change.</li>
+</ol>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-top: 44px">
+<span style="font-family: 'Source Serif 4', serif; font-size: 26px; color: #C9A96E">À partir de 990 € HTVA par mois</span>
+<a class="lnk" href="/responsable-marketing-externalise" style="color: #F4EEE3; text-decoration-color: rgba(201,169,110,0.8)">Comment ça se passe</a>
 </div>
 </div>
 </section>
 
-<section style="background: #EDE4D3">
-<div style="max-width: 1280px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 64px">
-<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">Ils me font <em class="ac">confiance</em></h2>
-<a href="/references" style="color: #113B30; font-size: 15px; font-weight: 400; text-decoration: underline; text-decoration-color: #B8925A; text-underline-offset: 7px">Voir les références</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 56px 48px">
-<div style="flex: 1 1 250px; min-width: 0; border-top: 1px solid #B8925A; padding-top: 28px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #7A5C26">LIÈGE · IMMOBILIER</span>
-<h3 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 30px; line-height: 1.2"><a href="https://www.optimum.be/fr/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: #B8925A; text-decoration-thickness: 1px; text-underline-offset: 6px">Immobilière Optimum <span aria-hidden="true" style="font-size: 0.6em; color: #B8925A">↗</span></a></h3>
-<p style="margin: 0; color: #3F5049">Référencement local, blog et réseaux sociaux. Position moyenne sur Google passée de 29 à 11 en trois mois.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; border-top: 1px solid #B8925A; padding-top: 28px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #7A5C26">MARRAKECH · HÔTELLERIE</span>
-<h3 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 30px; line-height: 1.2"><a href="https://bab-akoul.net/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: #B8925A; text-decoration-thickness: 1px; text-underline-offset: 6px">Bab Akoul <span aria-hidden="true" style="font-size: 0.6em; color: #B8925A">↗</span></a></h3>
-<p style="margin: 0; color: #3F5049">Trois établissements. Nouveau site avec réservation directe, plateformes de réservation, messages automatiques aux clients.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; border-top: 1px solid #B8925A; padding-top: 28px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #7A5C26">LIÈGE · CESSION D’ENTREPRISES</span>
-<h3 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 30px; line-height: 1.2"><a href="https://sp-invest.be/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: #B8925A; text-decoration-thickness: 1px; text-underline-offset: 6px">SP Invest <span aria-hidden="true" style="font-size: 0.6em; color: #B8925A">↗</span></a></h3>
-<p style="margin: 0; color: #3F5049">Brand book, refonte du site et stratégie auprès des experts-comptables, cabinets de cession et banques privées.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; border-top: 1px solid #B8925A; padding-top: 28px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #7A5C26">LIÈGE · AVOCATE</span>
-<h3 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 30px; line-height: 1.2"><a href="https://droit-de-la-circulation.be/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: #B8925A; text-decoration-thickness: 1px; text-underline-offset: 6px">Isabelle Péchard <span aria-hidden="true" style="font-size: 0.6em; color: #B8925A">↗</span></a></h3>
-<p style="margin: 0; color: #3F5049">Un site de vingt pages en droit de la circulation, pensé pour Google et pour les réponses des IA.</p>
-</div>
-</div>
-<div style="margin-top: 72px; padding-top: 40px; border-top: 1px solid #B8925A; display: flex; flex-wrap: wrap; gap: 40px 48px">
-<div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 3.6vw, 48px); line-height: 1.1; color: #113B30">29 → 11</span>
-<span style="font-size: 15px; line-height: 1.6; color: #3F5049">Position moyenne sur Google d’Immobilière Optimum, d’août à octobre 2026</span>
-</div>
-<div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 3.6vw, 48px); line-height: 1.1; color: #113B30">+60 %</span>
-<span style="font-size: 15px; line-height: 1.6; color: #3F5049">Clics depuis Google sur la même période, de 648 à 1 040 par mois</span>
-</div>
-<div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 3.6vw, 48px); line-height: 1.1; color: #113B30">350 000</span>
-<span style="font-size: 15px; line-height: 1.6; color: #3F5049">Vues sur Facebook et Instagram pour Optimum depuis août 2026, dont deux réels à plus de 60 000 vues chacun</span>
-</div>
-<div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 3.6vw, 48px); line-height: 1.1; color: #113B30">3 sites</span>
-<span style="font-size: 15px; line-height: 1.6; color: #3F5049">Mis en ligne en 2026 : Bab Akoul, SP Invest et droit-de-la-circulation.be</span>
-</div>
-</div>
+<section style="background: #FAF6EE; color: #113B30; border-top: 1px solid #E4D8BF">
+<div class="wrap" style="padding-top: clamp(56px, 8vw, 120px); padding-bottom: clamp(56px, 8vw, 120px)">
+<div class="eyebrow dark">L’agence</div>
+<h2 class="h2" style="margin: 14px 0 16px; max-width: 760px">Un projet précis à prix fixe</h2>
+<p style="margin: 0 0 32px; max-width: 620px; color: #3F5049">Sans abonnement. Le prix et le délai sont écrits avant de commencer.</p>
+<ul class="svc">
+<li><a href="/audit-seo"><span>Audit marketing, SEO et IA</span><span>500 €</span></a></li>
+<li><a href="/creation-site-internet-liege"><span>Site internet</span><span>dès 2 200 €</span></a></li>
+<li><a href="/consultant-seo-liege"><span>SEO et visibilité IA</span><span>990 € / mois</span></a></li>
+<li><a href="/agence#contenu"><span>Réseaux sociaux</span><span>dès 990 € / mois</span></a></li>
+<li><a href="/agence#marque"><span>Logo et identité</span><span>dès 390 €</span></a></li>
+<li><a href="/agence"><span>Publicité Google et Meta</span><span>dès 690 € / mois</span></a></li>
+<li><a href="/automatisation-marketing"><span>Automatisations</span><span>dès 1 500 €</span></a></li>
+<li><a href="/formation-ia-entreprise"><span>Formation IA</span><span>dès 500 €</span></a></li>
+</ul>
+<p style="margin: 20px 0 0; font-size: 14px; color: #3F5049">Prix HTVA. Vidéo, podcast et print : <a href="/agence">voir toutes les prestations</a>.</p>
 </div>
 </section>
-
-
 
 <section style="background: #F4EEE3">
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 6.94vw, 100px) var(--g); display: flex; flex-wrap: wrap-reverse; align-items: center; justify-content: space-between; gap: 40px 72px">
-<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; max-width: 640px">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 4px; color: #7A5C26">QUI INTERVIENT</div>
-<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(34px, 4vw, 54px); line-height: 1.1; letter-spacing: -1px">François Szmaj</h2>
-<p style="margin: 0; color: #3F5049">Je suis le responsable marketing externe de PME à Liège, à Bruxelles et jusqu’à Marrakech. Je m’occupe de leur marketing chaque mois, au plus près de l’entreprise.</p>
-<p style="margin: 0; color: #3F5049">Avant de me lancer, j’ai développé le marché belge d’une plateforme d’investissement participatif : contenus pour Google et communication aux investisseurs.</p>
-<ul style="list-style: none; margin: 4px 0 0; padding: 0; color: #3F5049"><li style="position: relative; padding: 9px 0 9px 22px"><span aria-hidden="true" style="position: absolute; left: 0; top: 9px; color: #B8925A">›</span>HEC Liège : master en gestion commerciale et bachelier en marketing</li><li style="position: relative; padding: 9px 0 9px 22px"><span aria-hidden="true" style="position: absolute; left: 0; top: 9px; color: #B8925A">›</span>Deux ans responsable marketing Belgique d’une plateforme française d’investissement participatif</li><li style="position: relative; padding: 9px 0 9px 22px"><span aria-hidden="true" style="position: absolute; left: 0; top: 9px; color: #B8925A">›</span>Indépendant depuis 2026</li><li style="position: relative; padding: 9px 0 9px 22px"><span aria-hidden="true" style="position: absolute; left: 0; top: 9px; color: #B8925A">›</span>Basé à Liège. Des clients à Bruxelles, en Wallonie et à Marrakech</li></ul>
-<a href="/a-propos" style="align-self: flex-start; color: #113B30; font-size: 15px; font-weight: 400; text-decoration: underline; text-decoration-color: #B8925A; text-underline-offset: 7px">Mon parcours</a>
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 7vw, 100px) var(--g); display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 36px 72px">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px; max-width: 620px">
+<h2 class="h2">Qui je suis</h2>
+<p style="margin: 0; color: #3F5049">François Szmaj, diplômé d’HEC Liège. Pendant deux ans, j’ai développé le marché belge d’une plateforme française d’investissement participatif, jusqu’à en devenir le responsable marketing Belgique.</p>
+<p style="margin: 0; color: #3F5049">Depuis 2026, je fais ce métier dans des PME à Liège, à Bruxelles et à Marrakech.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px"><a class="lnk" href="/a-propos" style="color: #113B30; text-decoration-color: #B8925A">Mon parcours</a><a class="lnk" href="https://www.linkedin.com/in/francoisszmaj/" target="_blank" rel="noopener" style="color: #113B30; text-decoration-color: #B8925A">LinkedIn</a></div>
 </div>
-<div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 18px; margin: 0 auto">
-<div style="width: clamp(180px, 22vw, 270px); aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: #113B30; box-shadow: 0 18px 40px rgba(17,59,48,0.18)">
+<div style="flex: 0 0 auto; width: clamp(150px, 20vw, 240px); aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: #113B30">
 <img src="francois-szmaj-portrait-2026.jpg" width="900" height="1200" loading="lazy" alt="Portrait de François Szmaj" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; transform: scale(1.55); transform-origin: 50% 26%">
-</div>
-<a href="https://www.linkedin.com/in/francoisszmaj/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #D9C9A6; border-radius: 999px; padding: 9px 18px; font-size: 14px; color: #113B30; text-decoration: none; background: #FAF6EE"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#113B30" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
 </div>
 </div>
 </section>
 
 <section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 900px; margin: 0 auto; padding: clamp(63px, 10.42vw, 150px) var(--g); display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
-<h2 style="margin: 0; font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.08; letter-spacing: -1px">Quel est <em class="ac">votre objectif ?</em></h2>
-<p style="margin: 0; max-width: 560px; color: #D9D2C3">Plus de demandes, de nouveaux clients professionnels, une marque à faire connaître. On en parle une heure et on regarde par où commencer.</p>
-<a href="tel:+32484705920" style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); color: #C9A96E; text-decoration: none; letter-spacing: 0.5px">0484 70 59 20</a>
+<div style="max-width: 900px; margin: 0 auto; padding: clamp(63px, 9vw, 140px) var(--g); display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+<h2 class="h2" style="color: #F4EEE3">Quel est votre objectif ?</h2>
+<p style="margin: 0; max-width: 520px; color: #D9D2C3">On en parle une heure et on regarde par où commencer.</p>
+<a href="tel:+32484705920" style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); color: #C9A96E; text-decoration: none">0484 70 59 20</a>
 <a class="btn-gold" href="/contact#rdv" style="background: #C9A96E; color: #113B30; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 2px; padding: 18px 30px; border-radius: 2px">PRENDRE RENDEZ-VOUS</a>
 </div>
 </section>
+
+<div class="callbar"><a href="tel:+32484705920" style="color: #F4EEE3; border: 1px solid rgba(201,169,110,0.7)">APPELER</a><a href="/contact#rdv" style="background: #C9A96E; color: #113B30">RENDEZ-VOUS</a></div>
 
 <footer style="background: #0B2B23; color: #C9D3CD; font-size: 14px">
 <div class="wrap" style="padding-top: 64px; padding-bottom: 48px; display: flex; flex-wrap: wrap; gap: 40px 72px">
