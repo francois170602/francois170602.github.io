@@ -59,7 +59,7 @@
 .shot figcaption{font-size:15px;color:#3F5049}.shot figcaption b{display:block;font-family:'Source Serif 4',serif;font-weight:500;font-size:20px;color:#113B30}
 .case{display:flex;flex-wrap:wrap;gap:32px 56px;align-items:center;padding:40px 0;border-top:1px solid #D9C9A6}
 .case .shot{flex:1 1 440px;min-width:0}.case .txt{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:12px}
-.case h3{margin:0;font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(26px,2.6vw,34px);color:#113B30}
+.case h2,.case h3{margin:0;font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(26px,2.6vw,34px);color:#113B30}
 .case .tag{font-size:12px;font-weight:500;letter-spacing:3px;color:#7A5C26;text-transform:uppercase}
 .case p{margin:0;color:#3F5049}
 .case .kpi{font-family:'Source Serif 4',serif;font-size:22px;color:#113B30;border-left:2px solid #C9A96E;padding-left:14px}
