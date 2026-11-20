@@ -17,9 +17,8 @@
 <meta name="theme-color" content="#113B30">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;family=Poppins:wght@300;400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<link rel="preload" href="/fonts/SourceSerif4-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 body{margin:0;background:#113B30}
 a{color:inherit}
@@ -62,8 +61,8 @@ details p{margin:14px 0 0;color:#3F5049;max-width:820px}
 .lk{text-decoration:underline;text-decoration-color:#B8925A;text-underline-offset:5px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Création de site internet pour PME", "description": "Conception d’un site vitrine pensé pour le référencement Google, la visibilité dans les IA et les demandes de contact.", "url": "https://szmaj.be/creation-site-internet-liege", "provider": {"@type": "ProfessionalService", "@id": "https://szmaj.be/#francois-szmaj", "name": "François Szmaj, marketing et stratégie", "url": "https://szmaj.be/", "telephone": "+32484705920", "email": "francois@szmaj.be", "address": {"@type": "PostalAddress", "addressLocality": "Liège", "postalCode": "4000", "addressCountry": "BE"}}, "areaServed": [{"@type": "City", "name": "Liège"}, {"@type": "City", "name": "Bruxelles"}, {"@type": "Country", "name": "Belgique"}], "offers": {"@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "2200", "url": "https://szmaj.be/creation-site-internet-liege"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://szmaj.be/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://szmaj.be/services"}, {"@type": "ListItem", "position": 3, "name": "Création de site internet", "item": "https://szmaj.be/creation-site-internet-liege"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte la création d’un site internet ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour une PME, comptez à partir de 2 200 € HTVA pour un site vitrine de cinq à dix pages : structure, textes, référencement, développement et mise en ligne. Le prix dépend du nombre de pages, des fonctions (réservation, formulaire avancé, plusieurs langues) et des contenus à produire."}}, {"@type": "Question", "name": "Combien de temps faut-il pour créer un site ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre à huit semaines en général. Le délai dépend surtout de la rapidité des validations et des photos disponibles."}}, {"@type": "Question", "name": "Sur quelle technologie le site est-il fait ?", "acceptedAnswer": {"@type": "Answer", "text": "WordPress quand vous voulez modifier vous-même vos pages, un site statique très rapide quand le contenu bouge peu, ou l’outil de votre secteur (par exemple un moteur de réservation pour un hôtel). Je choisis avec vous selon l’usage."}}, {"@type": "Question", "name": "Est-ce que j’écris les textes ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, c’est moi qui les écris, à partir d’un entretien et de vos documents. Vous relisez et vous corrigez. Les textes sont pensés pour Google et pour les réponses des IA dès le départ."}}, {"@type": "Question", "name": "Le site m’appartient-il ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le nom de domaine, l’hébergement et les accès sont à votre nom."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://szmaj.be/"}, {"@type": "ListItem", "position": 2, "name": "L’agence", "item": "https://szmaj.be/agence"}, {"@type": "ListItem", "position": 3, "name": "Création de site internet", "item": "https://szmaj.be/creation-site-internet-liege"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte la création d’un site internet ?", "acceptedAnswer": {"@type": "Answer", "text": "À partir de 2 200 € HTVA pour un site vitrine de cinq à dix pages : structure, textes, référencement, développement et mise en ligne. Le prix dépend du nombre de pages, des fonctions et des contenus à produire."}}, {"@type": "Question", "name": "Combien de temps faut-il pour créer un site ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre à huit semaines en général. Le délai dépend surtout de la rapidité des validations et des photos disponibles."}}, {"@type": "Question", "name": "Dois-je écrire les textes ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Je les écris à partir d’un entretien et de vos documents. Vous relisez et vous corrigez."}}, {"@type": "Question", "name": "Le site m’appartient-il ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le nom de domaine, l’hébergement et les accès sont à votre nom."}}]}</script>
 <style id="dd-css">
 nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 .nav{position:relative}
@@ -126,6 +125,7 @@ nav.open .burger i:after{transform:translateY(-5px) rotate(-45deg)}
 <style id="ac-css">
 em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.12em;letter-spacing:-0.01em;color:#B8925A}
 </style>
+<link rel="stylesheet" href="/css/v2.css">
 </head>
 <body>
 <div style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.75; color: #113B30; background: #F4EEE3">
@@ -159,108 +159,27 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 </div>
 </nav>
 
-<div class="wrap" style="padding-top: 48px; padding-bottom: clamp(46px, 7.64vw, 110px); position: relative">
-<div aria-hidden="true" style="position: absolute; right: 32px; bottom: -1px; width: 300px; height: 360px; border: 1px solid rgba(201,169,110,0.4); border-bottom: none; border-radius: 999px 999px 0 0"></div>
-<div style="position: relative; max-width: 820px; display: flex; flex-direction: column; gap: 26px">
-<div class="crumbs"><a href="/">Accueil</a> › <a href="/services">Services</a> › Création de site internet</div>
-<div class="eyebrow">CRÉATION DE SITE INTERNET · LIÈGE</div>
-<h1 class="serif" style="margin: 0; font-weight: 500; font-size: clamp(40px, 5.2vw, 72px); line-height: 1.05; letter-spacing: -1.5px">Création de site internet à Liège pour vendre <em class="ac">et pour être trouvé.</em></h1>
-<div class="rule"></div>
-<p style="margin: 0; max-width: 620px; font-size: 18px; color: #D9D2C3">Un site qui sort sur Google, que les IA savent résumer, et qui transforme les visites en appels. Je m’occupe de la structure, des textes et du référencement, et je pilote le développement jusqu’à la mise en ligne.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 6px">
-<a class="btn-gold" href="/contact?offre=site#rdv">PRENDRE RENDEZ-VOUS</a>
-<span style="font-size: 13px; font-weight: 500; letter-spacing: 2px; color: #C9A96E">À PARTIR DE 2 200 € HTVA</span>
-</div>
-</div>
-</div>
+<div class="hero-in"><div class="hero-txt">
+<div class="crumbs"><a href="/">Accueil</a> › <a href="/agence">L’agence</a> › Création de site internet</div>
+<div class="eyebrow">Création de site internet · Liège</div>
+<h1>Un site qui amène <em class="ac">des demandes</em></h1>
+<p class="lead">Je conçois la structure, j’écris les textes, je prépare le référencement et je pilote le développement jusqu’à la mise en ligne.</p>
+<div class="ctas"><a class="btn" href="/contact?offre=site#rdv">PRENDRE RENDEZ-VOUS</a><span class="price-chip">dès 2&nbsp;200 € HTVA</span><a class="lnk" href="tel:+32484705920" style="color:#F4EEE3;text-decoration-color:rgba(201,169,110,.8)">0484 70 59 20</a></div>
+</div></div>
 </section>
-<section style="background: #FAF6EE; color: #113B30; border-top: 1px solid #E4D8BF">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 48px">
-<h2 class="h2" style="flex: 1 1 460px">Ce qui est compris</h2>
-<p style="flex: 1 1 360px; max-width: 460px; margin: 0; color: #3F5049">Je m’occupe de tout, du premier croquis à la mise en ligne.</p>
-</div>
-<div class="lines">
-<div class="line"><h3>La structure</h3><p>Les pages dont vous avez besoin, et pas plus. Chaque page répond à une recherche que font vos clients.</p></div>
-<div class="line"><h3>Les textes</h3><p>Je les écris après un entretien avec vous. Clairs, précis, avec vos vrais chiffres et vos vrais services.</p></div>
-<div class="line"><h3>Le référencement</h3><p>Titres, descriptions, vitesse, version mobile, déclaration auprès de Google. Le site est prêt pour Google dès le premier jour.</p></div>
-<div class="line"><h3>Le design et le développement</h3><p>Je travaille avec des développeurs de confiance et je rédige le cahier des charges. Vous ne gérez pas de prestataire.</p></div>
-<div class="line"><h3>Les demandes</h3><p>Formulaire, prise de rendez-vous, appels mesurés. On sait combien de contacts le site apporte.</p></div>
-<div class="line"><h3>La mise en main</h3><p>Une session pour vous apprendre à modifier vos pages et à lire vos statistiques.</p></div>
-</div>
-</div>
-</section>
-<section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 18px"><div class="eyebrow dark">RÉALISATIONS</div><h2 class="h2">Des sites déjà en ligne</h2></div>
-<div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px; max-width: 760px">
-<p style="margin: 0; color: #3F5049"><strong style="font-weight: 500; color: #113B30">droit-de-la-circulation.be</strong> : vingt pages et un outil de calcul d’alcoolémie pour Isabelle Péchard, avocate spécialiste du droit routier à Liège. Structure, textes et cahier des charges du développeur. En ligne depuis octobre 2026.</p>
-<p style="margin: 0; color: #3F5049"><strong style="font-weight: 500; color: #113B30">Bab Akoul</strong> : le nouveau site de trois établissements hôteliers à Marrakech, avec un moteur de réservation directe et des messages automatiques aux clients. J’ai piloté le projet jusqu’à la mise en ligne en novembre 2026.</p>
-<p style="margin: 0; color: #3F5049"><strong style="font-weight: 500; color: #113B30">SP Invest</strong> : refonte complète du site d’un spécialiste de la cession de sociétés patrimoniales, avec une page pour chaque métier qui lui recommande des clients.</p>
-<p style="margin: 0; color: #3F5049">Et ce site-ci, que j’ai conçu et que je fais évoluer moi-même.</p>
+<section class="sec cream"><div class="wrap"><div class="eyebrow dark">Réalisations</div><h2 class="h2">Trois sites mis en ligne en 2026</h2><div class="shots"><figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/img/site-bab-akoul.webp" width="1200" height="600" loading="lazy" alt="Page d’accueil du site Bab Akoul"></div><figcaption><b>Bab Akoul</b>Site complet de trois établissements à Marrakech, conçu pour la réservation directe et pour Google. 225 clics depuis Google le premier mois.</figcaption></figure><figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/img/site-sp-invest.webp" width="1200" height="600" loading="lazy" alt="Page d’accueil du site SP Invest"></div><figcaption><b>SP Invest</b>Site retravaillé pour convertir, avec une page optimisée pour chaque métier prescripteur.</figcaption></figure><figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/img/site-droit-circulation.webp" width="1200" height="600" loading="lazy" alt="Page d’accueil du site droit-de-la-circulation.be"></div><figcaption><b>droit-de-la-circulation.be</b>Vingt pages et un calculateur d’alcoolémie pour une avocate spécialiste du droit routier.</figcaption></figure></div></div></section>
+<section class="sec paper"><div class="wrap"><div class="eyebrow dark">Compris dans le prix</div><h2 class="h2">Du premier entretien à la mise en ligne</h2><div class="cards"><div><b>La structure</b><p>Une page pour chaque recherche que font vos clients.</p></div><div><b>Les textes</b><p>Écrits après un entretien, avec vos vrais services et vos vrais chiffres.</p></div><div><b>Le référencement</b><p>Titres, vitesse, version mobile, Search Console dès le premier jour.</p></div><div><b>Le développement</b><p>Je rédige le cahier des charges et je pilote les développeurs.</p></div><div><b>Les demandes</b><p>Formulaire, prise de rendez-vous et appels mesurés.</p></div><div><b>La prise en main</b><p>Une session pour modifier vos pages et lire vos statistiques.</p></div></div></div></section>
+<section class="sec cream"><div class="wrap"><div class="eyebrow dark">Prix</div><h2 class="h2">Ce que coûte un site</h2><div class="rows"><div><b>Site vitrine de 5 à 10 pages</b><span>dès 2&nbsp;200 € HTVA</span><p>Structure, textes, référencement, design, développement et mise en ligne.</p></div><div><b>Site e-commerce</b><span>dès 3&nbsp;900 € HTVA</span><p>Catalogue, paiement en ligne, livraison et pages légales.</p></div><div><b>Refonte ou fonctions en plus</b><span>Sur devis</span><p>Réservation, version anglaise, espace client. Redirections incluses pour garder vos positions.</p></div></div><p class="src">Hébergement et nom de domaine à votre nom, au prix coûtant du fournisseur.</p></div></section>
+<section class="sec paper"><div class="wrap"><div class="eyebrow dark">Questions fréquentes</div><h2 class="h2">Avant de lancer le projet</h2><div class="faq"><details><summary>Combien coûte la création d’un site internet ?</summary><p>À partir de 2&nbsp;200 € HTVA pour un site vitrine de cinq à dix pages : structure, textes, référencement, développement et mise en ligne. Le prix dépend du nombre de pages, des fonctions et des contenus à produire.</p></details><details><summary>Combien de temps faut-il pour créer un site ?</summary><p>Quatre à huit semaines en général. Le délai dépend surtout de la rapidité des validations et des photos disponibles.</p></details><details><summary>Dois-je écrire les textes ?</summary><p>Non. Je les écris à partir d’un entretien et de vos documents. Vous relisez et vous corrigez.</p></details><details><summary>Le site m’appartient-il ?</summary><p>Oui. Le nom de domaine, l’hébergement et les accès sont à votre nom.</p></details></div></div></section>
+<section class="sec dark" style="padding:0"><div class="endcta">
+<h2 class="h2" style="color:#F4EEE3;margin:0">Quel site vous faut-il ?</h2>
+<p style="margin:0;max-width:560px;color:#D9D2C3">Une heure pour définir les pages, le budget et le délai.</p>
+<a class="btn" href="/contact?offre=site#rdv">PRENDRE RENDEZ-VOUS</a>
+<a class="tel" href="tel:+32484705920">0484 70 59 20</a>
+</div></section>
 
-</div>
-</div>
-</section>
-<section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<h2 class="h2" style="margin-bottom: 52px">Les étapes</h2>
-<div class="steps">
-<div class="step"><span class="n">ÉTAPE 1</span><b>Entretien et audit</b><p>Vos services, vos clients, vos concurrents, les recherches à viser.</p></div>
-<div class="step"><span class="n">ÉTAPE 2</span><b>Structure et textes</b><p>L’arborescence et toutes les pages rédigées, que vous validez.</p></div>
-<div class="step"><span class="n">ÉTAPE 3</span><b>Design et développement</b><p>Maquette, intégration, tests sur mobile et sur ordinateur.</p></div>
-<div class="step"><span class="n">ÉTAPE 4</span><b>Mise en ligne</b><p>Redirections, Search Console, sitemap, premier bilan après un mois.</p></div>
-</div>
-</div>
-</section>
-<section style="background: #FAF6EE; color: #113B30; border-top: 1px solid #E4D8BF">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px"><div class="eyebrow dark">PRIX</div><h2 class="h2">Ce que ça coûte</h2></div>
-<div style="flex: 2 1 560px; min-width: 0">
-<div class="lines">
-<div class="line"><h3>Site vitrine de 5 à 10 pages</h3><p><strong style="color: #113B30; font-weight: 500">À partir de 2 200 € HTVA</strong><br>Structure, textes, référencement, design, développement et mise en ligne.</p></div>
-<div class="line"><h3>Refonte d’un site existant</h3><p><strong style="color: #113B30; font-weight: 500">Sur devis</strong><br>Reprise des contenus utiles, redirections pour ne pas perdre vos positions.</p></div>
-<div class="line"><h3>Fonctions en plus</h3><p><strong style="color: #113B30; font-weight: 500">Sur devis</strong><br>Réservation, version anglaise, espace client, catalogue.</p></div>
-</div>
-<p style="margin: 24px 0 0; font-size: 15px; color: #56665F">Hébergement et nom de domaine à votre nom, facturés au prix coûtant par le fournisseur.</p>
-</div>
-</div>
-</section>
-<section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<h2 class="h2" style="flex: 1 1 300px">Questions fréquentes</h2>
-<div style="flex: 2 1 560px; min-width: 0; border-top: 1px solid #D9C9A6">
-<details><summary>Combien coûte la création d’un site internet ?</summary><p>Pour une PME, comptez à partir de 2 200 € HTVA pour un site vitrine de cinq à dix pages : structure, textes, référencement, développement et mise en ligne. Le prix dépend du nombre de pages, des fonctions (réservation, formulaire avancé, plusieurs langues) et des contenus à produire.</p></details>
-<details><summary>Combien de temps faut-il pour créer un site ?</summary><p>Quatre à huit semaines en général. Le délai dépend surtout de la rapidité des validations et des photos disponibles.</p></details>
-<details><summary>Sur quelle technologie le site est-il fait ?</summary><p>WordPress quand vous voulez modifier vous-même vos pages, un site statique très rapide quand le contenu bouge peu, ou l’outil de votre secteur (par exemple un moteur de réservation pour un hôtel). Je choisis avec vous selon l’usage.</p></details>
-<details><summary>Est-ce que j’écris les textes ?</summary><p>Non, c’est moi qui les écris, à partir d’un entretien et de vos documents. Vous relisez et vous corrigez. Les textes sont pensés pour Google et pour les réponses des IA dès le départ.</p></details>
-<details><summary>Le site m’appartient-il ?</summary><p>Oui. Le nom de domaine, l’hébergement et les accès sont à votre nom.</p></details>
-</div>
-</div>
-</section>
-<section style="background: #EDE4D3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(46px, 7.64vw, 110px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 48px; margin-bottom: 48px">
-<h2 class="h2">Les autres services</h2>
-<a class="lk" href="/services">Voir tous les services et les prix</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 44px 48px">
-<a class="card" href="/audit-seo"><span class="price">500 € HTVA</span><h3>Audit SEO et visibilité IA</h3></a>
-<a class="card" href="/consultant-seo-liege"><span class="price">990 € HTVA PAR MOIS</span><h3>Référencement Google et IA</h3></a>
-<a class="card" href="/automatisation-marketing"><span class="price">À PARTIR DE 1 500 € HTVA</span><h3>Automatisation marketing</h3></a>
-<a class="card" href="/formation-ia-entreprise"><span class="price">DÈS 500 € HTVA LA DEMI-JOURNÉE</span><h3>Formation IA en entreprise</h3></a>
-<a class="card" href="/responsable-marketing-externalise"><span class="price">À PARTIR DE 990 € HTVA PAR MOIS</span><h3>Responsable marketing externalisé</h3></a>
-</div>
-</div>
-</section>
-<section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 900px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g); display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
-<h2 class="h2" style="font-size: clamp(34px, 4.4vw, 58px)">Un site qui travaille pour vous.</h2>
-<p style="margin: 0; max-width: 560px; color: #D9D2C3">Dites-moi ce que fait votre entreprise et ce qui ne va pas avec le site actuel. Je vous réponds sous 24 heures ouvrables.</p>
-<a class="btn-gold" href="/contact?offre=site#rdv">PRENDRE RENDEZ-VOUS</a>
-<a href="tel:+32484705920" style="color: #C9A96E; text-decoration: none; font-family: 'Source Serif 4', serif; font-size: 26px">0484 70 59 20</a>
-</div>
-</section>
+<div class="callbar"><a href="tel:+32484705920" style="color: #F4EEE3; border: 1px solid rgba(201,169,110,0.7)">APPELER</a><a href="/contact#rdv" style="background: #C9A96E; color: #113B30">RENDEZ-VOUS</a></div>
+
 <footer style="background: #0B2B23; color: #C9D3CD; font-size: 14px">
 <div class="wrap" style="padding-top: 64px; padding-bottom: 48px; display: flex; flex-wrap: wrap; gap: 40px 72px">
 <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px">
@@ -268,14 +187,12 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 <span style="width: 38px; height: 38px; border-radius: 7px; border: 1px solid rgba(201,169,110,0.6); display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 15px; color: #F4EEE3">FS</span>
 <span style="font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 18px; color: #F4EEE3">François Szmaj</span>
 </div>
-<span>Consultant marketing, SEO et IA à Liège.</span>
+<span>Responsable marketing externe des PME à Liège.</span>
 <span>Liège · Bruxelles · Marrakech</span>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #C9A96E">MARKETING EXTERNE</span>
 <a href="/responsable-marketing-externalise" style="color: #C9D3CD; text-decoration: none">Responsable marketing externalisé</a>
-<a href="/formule" style="color: #C9D3CD; text-decoration: none">Comment se passe un mois</a>
-<a href="/services" style="color: #C9D3CD; text-decoration: none">Marketing externe ou agence ?</a>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #C9A96E">L’AGENCE</span>
@@ -296,6 +213,7 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 <a href="/references" style="color: #C9D3CD; text-decoration: none">Références</a>
 <a href="/a-propos" style="color: #C9D3CD; text-decoration: none">À propos</a>
 <span>BCE 1040.280.557</span>
+<span><a href="/mentions-legales" style="color: #C9D3CD">Mentions légales</a> · <a href="/confidentialite" style="color: #C9D3CD">Confidentialité</a></span>
 </div>
 </div>
 </footer>

@@ -17,9 +17,8 @@
 <meta name="theme-color" content="#113B30">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;family=Poppins:wght@300;400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<link rel="preload" href="/fonts/SourceSerif4-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 body{margin:0;background:#113B30}
 a{color:inherit}
@@ -62,8 +61,8 @@ details p{margin:14px 0 0;color:#3F5049;max-width:820px}
 .lk{text-decoration:underline;text-decoration-color:#B8925A;text-underline-offset:5px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Référencement Google et IA", "description": "Référencement naturel, référencement local et visibilité dans les réponses des IA, pour les PME de Liège et de Belgique.", "url": "https://szmaj.be/consultant-seo-liege", "provider": {"@type": "ProfessionalService", "@id": "https://szmaj.be/#francois-szmaj", "name": "François Szmaj, marketing et stratégie", "url": "https://szmaj.be/", "telephone": "+32484705920", "email": "francois@szmaj.be", "address": {"@type": "PostalAddress", "addressLocality": "Liège", "postalCode": "4000", "addressCountry": "BE"}}, "areaServed": [{"@type": "City", "name": "Liège"}, {"@type": "City", "name": "Bruxelles"}, {"@type": "Country", "name": "Belgique"}], "offers": {"@type": "Offer", "priceCurrency": "EUR", "price": "990", "url": "https://szmaj.be/consultant-seo-liege"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://szmaj.be/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://szmaj.be/services"}, {"@type": "ListItem", "position": 3, "name": "Consultant SEO", "item": "https://szmaj.be/consultant-seo-liege"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien de temps faut-il pour voir les premiers résultats en SEO ?", "acceptedAnswer": {"@type": "Answer", "text": "Les premiers mouvements apparaissent souvent entre quatre et huit semaines sur les recherches où vous êtes déjà en deuxième page. Pour des requêtes plus disputées, comptez trois à six mois."}}, {"@type": "Question", "name": "Quelle différence entre un consultant SEO et une agence SEO ?", "acceptedAnswer": {"@type": "Answer", "text": "Avec un consultant, la personne qui fait l’audit est celle qui écrit les pages et qui vous envoie le bilan. Vous parlez directement à celui qui travaille sur votre site."}}, {"@type": "Question", "name": "Est-ce que le référencement dans ChatGPT existe vraiment ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les IA citent des sources : des sites, des fiches Google, des annuaires, des articles. On travaille ces sources pour que votre entreprise y soit présente et décrite correctement. On parle aussi de GEO, pour Generative Engine Optimization."}}, {"@type": "Question", "name": "Faut-il refaire mon site pour être mieux référencé ?", "acceptedAnswer": {"@type": "Answer", "text": "Rarement. Dans la plupart des cas, on corrige la structure, les titres et les textes des pages existantes, et on ajoute quelques pages ciblées."}}, {"@type": "Question", "name": "Vous travaillez seulement à Liège ?", "acceptedAnswer": {"@type": "Answer", "text": "Je suis basé à Liège et je travaille aussi à Bruxelles et à distance pour toute la Belgique francophone. Le référencement local fonctionne pour n’importe quelle ville."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://szmaj.be/"}, {"@type": "ListItem", "position": 2, "name": "L’agence", "item": "https://szmaj.be/agence"}, {"@type": "ListItem", "position": 3, "name": "Consultant SEO", "item": "https://szmaj.be/consultant-seo-liege"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien de temps faut-il pour voir les premiers résultats ?", "acceptedAnswer": {"@type": "Answer", "text": "Les premiers mouvements apparaissent souvent entre quatre et huit semaines sur les recherches où vous êtes déjà en deuxième page. Pour des requêtes plus disputées, comptez trois à six mois."}}, {"@type": "Question", "name": "Le référencement dans ChatGPT existe-t-il vraiment ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les IA citent des sources : des sites, des fiches Google, des annuaires, des articles. Je travaille ces sources pour que votre entreprise y soit présente et correctement décrite."}}, {"@type": "Question", "name": "Faut-il refaire mon site pour être mieux référencé ?", "acceptedAnswer": {"@type": "Answer", "text": "Rarement. Dans la plupart des cas, je corrige la structure, les titres et les textes des pages existantes, puis j’ajoute quelques pages ciblées."}}, {"@type": "Question", "name": "Travaillez-vous seulement à Liège ?", "acceptedAnswer": {"@type": "Answer", "text": "Je suis basé à Liège et je travaille aussi à Bruxelles et à distance pour toute la Belgique francophone. Le référencement local fonctionne pour n’importe quelle ville."}}]}</script>
 <style id="dd-css">
 nav[aria-label="Navigation principale"]{position:relative;z-index:40}
 .nav{position:relative}
@@ -126,6 +125,7 @@ nav.open .burger i:after{transform:translateY(-5px) rotate(-45deg)}
 <style id="ac-css">
 em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.12em;letter-spacing:-0.01em;color:#B8925A}
 </style>
+<link rel="stylesheet" href="/css/v2.css">
 </head>
 <body>
 <div style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.75; color: #113B30; background: #F4EEE3">
@@ -159,106 +159,26 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 </div>
 </nav>
 
-<div class="wrap" style="padding-top: 48px; padding-bottom: clamp(46px, 7.64vw, 110px); position: relative">
-<div aria-hidden="true" style="position: absolute; right: 32px; bottom: -1px; width: 300px; height: 360px; border: 1px solid rgba(201,169,110,0.4); border-bottom: none; border-radius: 999px 999px 0 0"></div>
-<div style="position: relative; max-width: 820px; display: flex; flex-direction: column; gap: 26px">
-<div class="crumbs"><a href="/">Accueil</a> › <a href="/services">Services</a> › Consultant SEO</div>
-<div class="eyebrow">RÉFÉRENCEMENT NATUREL · LIÈGE</div>
-<h1 class="serif" style="margin: 0; font-weight: 500; font-size: clamp(40px, 5.2vw, 72px); line-height: 1.05; letter-spacing: -1.5px">Consultant SEO à Liège pour être trouvé sur Google <em class="ac">et cité par les IA.</em></h1>
-<div class="rule"></div>
-<p style="margin: 0; max-width: 620px; font-size: 18px; color: #D9D2C3">Je m’occupe de votre référencement chaque mois : pages, fiche Google, avis, contenus. Vos clients vous trouvent quand ils cherchent votre métier dans votre ville, sur Google comme dans ChatGPT.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 6px">
-<a class="btn-gold" href="/contact?offre=seo#rdv">PRENDRE RENDEZ-VOUS</a>
-<span style="font-size: 13px; font-weight: 500; letter-spacing: 2px; color: #C9A96E">990 € HTVA PAR MOIS</span>
-</div>
-</div>
-</div>
+<div class="hero-in"><div class="hero-txt">
+<div class="crumbs"><a href="/">Accueil</a> › <a href="/agence">L’agence</a> › Référencement</div>
+<div class="eyebrow">Référencement Google et IA · Liège</div>
+<h1>Remonter sur Google <em class="ac">et dans les IA</em></h1>
+<p class="lead">Je corrige votre site, j’écris les pages qui manquent et je travaille votre fiche Google. Chaque mois, vous recevez les positions et les clics.</p>
+<div class="ctas"><a class="btn" href="/contact?offre=seo#rdv">PRENDRE RENDEZ-VOUS</a><span class="price-chip">990 € HTVA / mois</span><a class="lnk" href="tel:+32484705920" style="color:#F4EEE3;text-decoration-color:rgba(201,169,110,.8)">0484 70 59 20</a></div>
+</div></div>
 </section>
-<section style="background: #FAF6EE; color: #113B30; border-top: 1px solid #E4D8BF">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 64px; margin-bottom: 48px">
-<h2 class="h2" style="flex: 1 1 460px">Ce que je fais chaque mois</h2>
-<p style="flex: 1 1 360px; max-width: 460px; margin: 0; color: #3F5049">Le travail suit les priorités de l’audit de départ, inclus dans le prix.</p>
-</div>
-<div class="lines">
-<div class="line"><h3>Référencement naturel</h3><p>Les titres et les textes des pages qui comptent, les liens entre vos pages, les corrections techniques. Je réécris ce qui doit l’être.</p></div>
-<div class="line"><h3>Référencement local</h3><p>Fiche Google complète, catégories, photos, publications, réponses aux avis, cohérence de vos coordonnées dans les annuaires.</p></div>
-<div class="line"><h3>Avis clients</h3><p>Une demande d’avis envoyée automatiquement après chaque vente ou chaque prestation. C’est souvent ce qui fait bouger les choses le plus vite.</p></div>
-<div class="line"><h3>Visibilité dans les IA</h3><p>Des pages claires et précises que ChatGPT, Gemini et Perplexity peuvent citer, des questions-réponses, et les réglages techniques qui les aident à vous lire.</p></div>
-<div class="line"><h3>Contenus</h3><p>Deux à quatre articles ou pages par mois, écrits sur les questions que vos clients tapent vraiment.</p></div>
-<div class="line"><h3>Bilan mensuel</h3><p>Positions, clics, appels et demandes reçues, relevés dans la Search Console et Google Analytics. Un document court, chaque mois.</p></div>
-</div>
-</div>
-</section>
-<section style="background: #0E3329; color: #F4EEE3">
-<div class="wrap" style="padding-top: clamp(46px, 7.64vw, 110px); padding-bottom: clamp(46px, 7.64vw, 110px)">
-<div class="eyebrow" style="margin-bottom: 18px">PREUVES</div>
-<h2 class="h2" style="margin-bottom: 48px">Ce que ça a donné chez Immobilière Optimum</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 40px 48px">
-<div style="flex: 1 1 260px; min-width: 0; border-top: 1px solid rgba(201,169,110,0.5); padding-top: 24px; display: flex; flex-direction: column; gap: 8px"><span class="serif" style="font-size: clamp(34px, 3.4vw, 46px); color: #C9A96E; line-height: 1.1">29 → 11</span><span style="color: #D9D2C3; font-size: 15px">Position moyenne sur Google d’Immobilière Optimum, entre août et octobre 2026</span></div>
-<div style="flex: 1 1 260px; min-width: 0; border-top: 1px solid rgba(201,169,110,0.5); padding-top: 24px; display: flex; flex-direction: column; gap: 8px"><span class="serif" style="font-size: clamp(34px, 3.4vw, 46px); color: #C9A96E; line-height: 1.1">648 → 1 040</span><span style="color: #D9D2C3; font-size: 15px">Clics mensuels depuis Google sur la même période</span></div>
-<div style="flex: 1 1 260px; min-width: 0; border-top: 1px solid rgba(201,169,110,0.5); padding-top: 24px; display: flex; flex-direction: column; gap: 8px"><span class="serif" style="font-size: clamp(34px, 3.4vw, 46px); color: #C9A96E; line-height: 1.1">20 pages</span><span style="color: #D9D2C3; font-size: 15px">Le site droit-de-la-circulation.be, écrit pour Google et pour les réponses des IA</span></div>
-</div>
-<p style="margin: 40px 0 0; font-size: 14px; color: #9FB1A8">Chiffres relevés dans Google Search Console et Meta Business Suite. Détail sur la page <a class="lk" href="/references" style="color: #E6DFD1">Références</a>.</p>
-</div>
-</section>
-<section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 18px"><div class="eyebrow dark">MÉTHODE</div><h2 class="h2">SEO local à Liège : ce qui fait la différence</h2></div>
-<div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px; max-width: 760px">
-<p style="margin: 0; color: #3F5049">Sur une recherche comme « agence immobilière Liège » ou « avocat roulage Liège », Google affiche d’abord la carte et trois fiches. Ces trois places se jouent sur la fiche Google, les avis et la proximité, bien plus que sur le site.</p>
-<p style="margin: 0; color: #3F5049">Sous la carte, les résultats classiques récompensent les pages qui répondent précisément à la question, avec le nom de la ville, des informations concrètes et des liens depuis d’autres sites locaux.</p>
-<p style="margin: 0; color: #3F5049">Les IA ajoutent une troisième couche. Elles résument ce qu’elles trouvent sur vous. Si votre site est vague ou si vos fiches se contredisent, elles citeront quelqu’un d’autre. C’est pour ça que je travaille les trois ensemble.</p>
+<section class="sec cream"><div class="wrap"><div class="eyebrow dark">Résultat</div><h2 class="h2">Immobilière Optimum en trois mois</h2><div style="display:flex;flex-wrap:wrap;gap:40px 64px;align-items:center"><div style="flex:1 1 520px;min-width:0"><svg class="chart" viewBox="0 0 480 300" role="img" aria-label="Position moyenne hebdomadaire sur Google d’Immobilière Optimum, d’environ 29 en août à environ 11 en novembre 2026" xmlns="http://www.w3.org/2000/svg"><line x1="40" x2="464" y1="32.7" y2="32.7" stroke="#E4D8BF"/><text x="30" y="36.7" text-anchor="end" font-size="15" fill="#6B7A73">1</text><line x1="40" x2="464" y1="92.9" y2="92.9" stroke="#E4D8BF"/><text x="30" y="96.9" text-anchor="end" font-size="15" fill="#6B7A73">10</text><line x1="40" x2="464" y1="159.7" y2="159.7" stroke="#E4D8BF"/><text x="30" y="163.7" text-anchor="end" font-size="15" fill="#6B7A73">20</text><line x1="40" x2="464" y1="226.6" y2="226.6" stroke="#E4D8BF"/><text x="30" y="230.6" text-anchor="end" font-size="15" fill="#6B7A73">30</text><text x="40.0" y="288" font-size="15" fill="#6B7A73">août</text><text x="173.3" y="288" font-size="15" fill="#6B7A73">sept.</text><text x="303.5" y="288" font-size="15" fill="#6B7A73">oct.</text><text x="436.7" y="288" font-size="15" fill="#6B7A73">nov.</text><polyline points="40.0,217.3 70.3,223.5 100.6,224.4 130.9,217.9 161.1,229.1 191.4,230.5 221.7,193.0 252.0,103.9 282.3,112.5 312.6,110.3 342.9,89.4 373.1,101.5 403.4,97.4 433.7,98.7 464.0,101.2" fill="none" stroke="#113B30" stroke-width="2.5" stroke-linejoin="round"/><circle cx="40.0" cy="217.3" r="5" fill="#113B30"/><text x="50.0" y="237.3" font-size="18" fill="#113B30">29</text><circle cx="464.0" cy="101.2" r="5" fill="#C9A96E"/><text x="456.0" y="123.2" text-anchor="end" font-size="18" fill="#113B30">11</text><text x="40" y="12" font-size="15" fill="#6B7A73">Position moyenne (1 = premier résultat)</text></svg></div><div style="flex:1 1 280px"><div class="stats"><div><div class="num">29 → 11</div><div class="num-l">Position moyenne sur Google, d’août à novembre 2026</div></div><div><div class="num">× 7</div><div class="num-l">Apparitions dans Google : de 290 à plus de 2&nbsp;100 par jour</div></div><div><div class="num">+ 60 %</div><div class="num-l">Clics depuis Google : de 648 à 1&nbsp;040 par mois</div></div></div></div></div><p class="src">Source : Google Search Console d’Immobilière Optimum, moyenne hebdomadaire d’août à novembre 2026, clics d’août à octobre. <a href="/references">Toutes les références</a></p></div></section>
+<section class="sec paper"><div class="wrap"><div class="eyebrow dark">Chaque mois</div><h2 class="h2">Le travail effectué</h2><div class="cards"><div><b>Les corrections</b><p>Titres, vitesse, version mobile, pages en double, erreurs d’indexation.</p></div><div><b>Les pages</b><p>Une page par service et par ville que vos clients recherchent.</p></div><div><b>La fiche Google</b><p>Catégories, photos, publications et réponses aux avis.</p></div><div><b>Les IA</b><p>Votre entreprise présente et bien décrite dans les sources citées par ChatGPT et Gemini.</p></div><div><b>Les liens</b><p>Annuaires, partenaires et presse locale.</p></div><div><b>Le bilan</b><p>Positions, clics et demandes, avec les priorités du mois suivant.</p></div></div></div></section>
+<section class="sec cream"><div class="wrap"><div class="eyebrow dark">Questions fréquentes</div><h2 class="h2">Avant de commencer</h2><div class="faq"><details><summary>Combien de temps faut-il pour voir les premiers résultats ?</summary><p>Les premiers mouvements apparaissent souvent entre quatre et huit semaines sur les recherches où vous êtes déjà en deuxième page. Pour des requêtes plus disputées, comptez trois à six mois.</p></details><details><summary>Le référencement dans ChatGPT existe-t-il vraiment ?</summary><p>Oui. Les IA citent des sources : des sites, des fiches Google, des annuaires, des articles. Je travaille ces sources pour que votre entreprise y soit présente et correctement décrite.</p></details><details><summary>Faut-il refaire mon site pour être mieux référencé ?</summary><p>Rarement. Dans la plupart des cas, je corrige la structure, les titres et les textes des pages existantes, puis j’ajoute quelques pages ciblées.</p></details><details><summary>Travaillez-vous seulement à Liège ?</summary><p>Je suis basé à Liège et je travaille aussi à Bruxelles et à distance pour toute la Belgique francophone. Le référencement local fonctionne pour n’importe quelle ville.</p></details></div></div></section>
+<section class="sec dark" style="padding:0"><div class="endcta">
+<h2 class="h2" style="color:#F4EEE3;margin:0">Sur quelles recherches voulez-vous apparaître ?</h2>
+<p style="margin:0;max-width:560px;color:#D9D2C3">Trois mois minimum, puis au mois. Le premier rendez-vous sert à fixer les recherches visées.</p>
+<a class="btn" href="/contact?offre=seo#rdv">PRENDRE RENDEZ-VOUS</a>
+<a class="tel" href="tel:+32484705920">0484 70 59 20</a>
+</div></section>
 
-</div>
-</div>
-</section>
-<section style="background: #FAF6EE; color: #113B30; border-top: 1px solid #E4D8BF">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px"><div class="eyebrow dark">PRIX</div><h2 class="h2">Un abonnement mensuel</h2></div>
-<div style="flex: 2 1 560px; min-width: 0">
-<div class="lines">
-<div class="line"><h3>Référencement Google et IA</h3><p><strong style="color: #113B30; font-weight: 500">990 € HTVA / mois</strong><br>Audit de départ inclus, travail chaque mois, bilan mensuel. Trois mois minimum, puis au mois.</p></div>
-</div>
-<p style="margin: 24px 0 0; font-size: 15px; color: #56665F">Vous pouvez arrêter chaque mois après les trois premiers.</p>
-</div>
-</div>
-</section>
-<section style="background: #F4EEE3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(50px, 8.33vw, 120px); padding-bottom: clamp(50px, 8.33vw, 120px); display: flex; flex-wrap: wrap; gap: 40px 96px">
-<h2 class="h2" style="flex: 1 1 300px">Questions fréquentes</h2>
-<div style="flex: 2 1 560px; min-width: 0; border-top: 1px solid #D9C9A6">
-<details><summary>Combien de temps faut-il pour voir les premiers résultats en SEO ?</summary><p>Les premiers mouvements apparaissent souvent entre quatre et huit semaines sur les recherches où vous êtes déjà en deuxième page. Pour des requêtes plus disputées, comptez trois à six mois.</p></details>
-<details><summary>Quelle différence entre un consultant SEO et une agence SEO ?</summary><p>Avec un consultant, la personne qui fait l’audit est celle qui écrit les pages et qui vous envoie le bilan. Vous parlez directement à celui qui travaille sur votre site.</p></details>
-<details><summary>Est-ce que le référencement dans ChatGPT existe vraiment ?</summary><p>Oui. Les IA citent des sources : des sites, des fiches Google, des annuaires, des articles. On travaille ces sources pour que votre entreprise y soit présente et décrite correctement. On parle aussi de GEO, pour Generative Engine Optimization.</p></details>
-<details><summary>Faut-il refaire mon site pour être mieux référencé ?</summary><p>Rarement. Dans la plupart des cas, on corrige la structure, les titres et les textes des pages existantes, et on ajoute quelques pages ciblées.</p></details>
-<details><summary>Vous travaillez seulement à Liège ?</summary><p>Je suis basé à Liège et je travaille aussi à Bruxelles et à distance pour toute la Belgique francophone. Le référencement local fonctionne pour n’importe quelle ville.</p></details>
-</div>
-</div>
-</section>
-<section style="background: #EDE4D3; color: #113B30">
-<div class="wrap" style="padding-top: clamp(46px, 7.64vw, 110px); padding-bottom: clamp(50px, 8.33vw, 120px)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 48px; margin-bottom: 48px">
-<h2 class="h2">Les autres services</h2>
-<a class="lk" href="/services">Voir tous les services et les prix</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 44px 48px">
-<a class="card" href="/audit-seo"><span class="price">500 € HTVA</span><h3>Audit SEO et visibilité IA</h3></a>
-<a class="card" href="/creation-site-internet-liege"><span class="price">À PARTIR DE 2 200 € HTVA</span><h3>Création de site internet</h3></a>
-<a class="card" href="/automatisation-marketing"><span class="price">À PARTIR DE 1 500 € HTVA</span><h3>Automatisation marketing</h3></a>
-<a class="card" href="/formation-ia-entreprise"><span class="price">DÈS 500 € HTVA LA DEMI-JOURNÉE</span><h3>Formation IA en entreprise</h3></a>
-<a class="card" href="/responsable-marketing-externalise"><span class="price">À PARTIR DE 990 € HTVA PAR MOIS</span><h3>Responsable marketing externalisé</h3></a>
-</div>
-</div>
-</section>
-<section style="background: #113B30; color: #F4EEE3">
-<div style="max-width: 900px; margin: 0 auto; padding: clamp(59px, 9.72vw, 140px) var(--g); display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
-<h2 class="h2" style="font-size: clamp(34px, 4.4vw, 58px)">Remonter sur Google à Liège.</h2>
-<p style="margin: 0; max-width: 560px; color: #D9D2C3">Envoyez-moi l’adresse de votre site. Je regarde vos positions avant notre premier échange.</p>
-<a class="btn-gold" href="/contact?offre=seo#rdv">PRENDRE RENDEZ-VOUS</a>
-<a href="tel:+32484705920" style="color: #C9A96E; text-decoration: none; font-family: 'Source Serif 4', serif; font-size: 26px">0484 70 59 20</a>
-</div>
-</section>
+<div class="callbar"><a href="tel:+32484705920" style="color: #F4EEE3; border: 1px solid rgba(201,169,110,0.7)">APPELER</a><a href="/contact#rdv" style="background: #C9A96E; color: #113B30">RENDEZ-VOUS</a></div>
+
 <footer style="background: #0B2B23; color: #C9D3CD; font-size: 14px">
 <div class="wrap" style="padding-top: 64px; padding-bottom: 48px; display: flex; flex-wrap: wrap; gap: 40px 72px">
 <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px">
@@ -266,14 +186,12 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 <span style="width: 38px; height: 38px; border-radius: 7px; border: 1px solid rgba(201,169,110,0.6); display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 15px; color: #F4EEE3">FS</span>
 <span style="font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 18px; color: #F4EEE3">François Szmaj</span>
 </div>
-<span>Consultant marketing, SEO et IA à Liège.</span>
+<span>Responsable marketing externe des PME à Liège.</span>
 <span>Liège · Bruxelles · Marrakech</span>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #C9A96E">MARKETING EXTERNE</span>
 <a href="/responsable-marketing-externalise" style="color: #C9D3CD; text-decoration: none">Responsable marketing externalisé</a>
-<a href="/formule" style="color: #C9D3CD; text-decoration: none">Comment se passe un mois</a>
-<a href="/services" style="color: #C9D3CD; text-decoration: none">Marketing externe ou agence ?</a>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #C9A96E">L’AGENCE</span>
@@ -294,6 +212,7 @@ em.ac{font-family:'Instrument Serif','Source Serif 4',serif;font-style:italic;fo
 <a href="/references" style="color: #C9D3CD; text-decoration: none">Références</a>
 <a href="/a-propos" style="color: #C9D3CD; text-decoration: none">À propos</a>
 <span>BCE 1040.280.557</span>
+<span><a href="/mentions-legales" style="color: #C9D3CD">Mentions légales</a> · <a href="/confidentialite" style="color: #C9D3CD">Confidentialité</a></span>
 </div>
 </div>
 </footer>
