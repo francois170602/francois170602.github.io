@@ -4,7 +4,7 @@
    - Le choix est mémorisé 6 mois. Lien « Gérer les cookies » possible via window.szmajConsent().
    - Événements : generate_lead (page /merci après envoi du formulaire), clic_telephone, clic_email. */
 (function () {
-  var GA_ID = 'G-NNYGRR51LT';
+  var GA_ID = 'G-7F2239LB3M';
   var KEY = 'szmaj_consent';
   var MAX_AGE = 1000 * 60 * 60 * 24 * 182;
 
